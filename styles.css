@@ -1372,6 +1372,87 @@ audio {
   font-weight: 760;
 }
 
+.legal-section {
+  min-height: calc(100vh - 160px);
+  background: var(--surface-alt);
+}
+
+.legal-inner {
+  width: min(820px, calc(100% - 40px));
+}
+
+.text-link {
+  display: inline-flex;
+  color: var(--meta-text);
+  font-size: 14px;
+  font-weight: 680;
+}
+
+.text-link:hover {
+  color: var(--blue);
+}
+
+.legal-header {
+  margin-top: 32px;
+}
+
+.legal-header h1 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 50px);
+  line-height: 1.08;
+  font-weight: 560;
+  letter-spacing: 0.005em;
+}
+
+.legal-header p {
+  max-width: 660px;
+  margin-top: 18px;
+  color: var(--body-copy);
+  font-size: 18px;
+  line-height: 1.58;
+}
+
+.legal-header span {
+  display: block;
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.legal-panel {
+  display: grid;
+  gap: 30px;
+  margin-top: 44px;
+  padding-top: 36px;
+  border-top: 1px solid var(--line);
+}
+
+.legal-block h2 {
+  margin: 0;
+  font-size: 21px;
+  line-height: 1.24;
+  font-weight: 620;
+}
+
+.legal-block p {
+  margin-top: 12px;
+  color: var(--body-copy);
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.legal-block a {
+  color: var(--meta-text);
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.legal-block a:hover {
+  color: var(--blue);
+}
+
 .site-footer {
   display: flex;
   min-height: 72px;
@@ -1386,6 +1467,7 @@ audio {
 
 .footer-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
   align-items: center;
 }

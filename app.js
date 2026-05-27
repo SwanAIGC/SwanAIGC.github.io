@@ -232,6 +232,96 @@ const voiceDemoTabs = [
   { id: "swanvoice-four", label: "Four Speaker", groupIndex: 2 },
 ];
 
+const legalPages = {
+  privacy: {
+    title: "Privacy Policy",
+    lead:
+      "This policy explains how the SwanAIGC research demo website handles information.",
+    updated: "May 27, 2026",
+    sections: [
+      {
+        title: "Information we do not collect",
+        body: [
+          "This website does not require accounts, payment, or file uploads.",
+          "The demo pages play pre-generated audio samples. They do not ask visitors to submit voices, prompts, or personal information.",
+        ],
+      },
+      {
+        title: "Technical data",
+        body: [
+          "Like most static websites, hosting providers, browsers, networks, or security tools may process standard technical data such as IP address, user agent, referrer, timestamps, and requested URLs to deliver the site and protect it from abuse.",
+          "SwanAIGC does not use this website to run behavioral advertising or sell visitor data.",
+        ],
+      },
+      {
+        title: "Third-party links",
+        body: [
+          "Links to GitHub, ByteDance, papers, demos, or other external resources are governed by the privacy policies of those services.",
+        ],
+      },
+      {
+        title: "Contact",
+        body: [
+          'If you contact the project team, the information you provide will be used to respond to your request, maintain project records, and handle safety, rights, or misuse reports. For questions, use the <a href="https://github.com/SwanAIGC" target="_blank" rel="noreferrer">SwanAIGC GitHub organization</a>.',
+        ],
+      },
+      {
+        title: "Changes",
+        body: [
+          "This policy may be updated as the website, demos, or project resources change.",
+        ],
+      },
+    ],
+  },
+  terms: {
+    title: "Terms",
+    lead:
+      "These terms apply to use of the SwanAIGC research demo website and its public project pages.",
+    updated: "May 27, 2026",
+    sections: [
+      {
+        title: "Research demo",
+        body: [
+          "SwanAIGC provides project descriptions, figures, papers, and pre-generated media examples for research, education, and evaluation.",
+          "The site may change, remove, or update content without notice.",
+        ],
+      },
+      {
+        title: "Responsible use",
+        body: [
+          "Some audio examples on this site are synthetic or AI-generated. Do not use the website, demos, or project materials to impersonate a real person, mislead listeners, create deceptive media, violate law, or infringe third-party rights.",
+          "If you publish, redistribute, or build on generated or synthetic content, you are responsible for following applicable consent, disclosure, labeling, copyright, and personality-rights requirements.",
+        ],
+      },
+      {
+        title: "Licenses and ownership",
+        body: [
+          "Repository software is licensed under the license file in the repository. Papers, figures, model artifacts, datasets, audio samples, trademarks, and third-party materials may be governed by separate licenses or rights.",
+          "No permission is granted to use SwanAIGC, ByteDance, or project marks except as necessary to refer to the project accurately.",
+        ],
+      },
+      {
+        title: "No warranties",
+        body: [
+          "The website and demo content are provided as is. SwanAIGC makes no warranties about availability, accuracy, fitness for a particular purpose, or non-infringement.",
+        ],
+      },
+      {
+        title: "Third-party resources",
+        body: [
+          "External links are provided for convenience. SwanAIGC is not responsible for the content, policies, or availability of third-party websites.",
+        ],
+      },
+      {
+        title: "Reports",
+        body: [
+          'For rights concerns, misuse reports, or questions about these terms, contact the maintainers through the <a href="https://github.com/SwanAIGC" target="_blank" rel="noreferrer">SwanAIGC GitHub organization</a>.',
+        ],
+      },
+    ],
+  },
+};
+
 function arrowLink(label, href, disabled = false) {
   const tag = disabled ? "span" : "a";
   const attrs = disabled
@@ -783,8 +873,37 @@ function renderSwanSphere() {
     </section>`;
 }
 
+function renderLegalPage(type) {
+  const page = legalPages[type];
+  const sections = page.sections
+    .map(
+      (section) => `
+        <section class="legal-block">
+          <h2>${section.title}</h2>
+          ${section.body.map((paragraph) => `<p>${paragraph}</p>`).join("")}
+        </section>`
+    )
+    .join("");
+
+  return `
+    <section class="section legal-section">
+      <div class="section-inner legal-inner">
+        <a class="text-link" href="#home">Back to SwanAIGC</a>
+        <div class="legal-header">
+          <h1>${page.title}</h1>
+          <p>${page.lead}</p>
+          <span>Effective date: ${page.updated}</span>
+        </div>
+        <div class="legal-panel">
+          ${sections}
+        </div>
+      </div>
+    </section>`;
+}
+
 function currentRoute() {
   const hash = window.location.hash.replace("#", "");
+  if (hash === "privacy" || hash === "terms") return hash;
   if (
     hash === "swanvoice" ||
     hash === "swanvoice-demo" ||
@@ -966,7 +1085,9 @@ function render() {
         ? renderBench()
         : route === "swansphere"
           ? renderSwanSphere()
-          : renderHome();
+          : route === "privacy" || route === "terms"
+            ? renderLegalPage(route)
+            : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
   initLazyAudio(app);
@@ -981,7 +1102,11 @@ function render() {
         ? "SwanAIGC | SwanBench-Speech"
         : route === "swansphere"
           ? "SwanAIGC | SwanSphere"
-          : "SwanAIGC";
+          : route === "privacy"
+            ? "SwanAIGC | Privacy Policy"
+            : route === "terms"
+              ? "SwanAIGC | Terms"
+              : "SwanAIGC";
 }
 
 window.addEventListener("hashchange", render);
