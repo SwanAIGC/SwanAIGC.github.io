@@ -1,6 +1,9 @@
 const abstractText =
   "Zero-shot text-to-speech (TTS) has advanced rapidly for single-speaker synthesis, but expressive long-form multi-speaker dialogue remains challenging. A common workaround is to synthesize each turn independently with a monologue TTS model and stitch the outputs together, which increases inference cost and often harms acoustic consistency, conversational coherence, and affective continuity across turns. Existing dialogue TTS systems mitigate this issue, but still struggle with expressive coherence, controllable speaker switching, and preserving monologue quality. We present SwanData-Speech and SwanVoice. SwanData-Speech is a scalable pipeline for constructing high-quality and expressive monologue and dialogue corpora from in-the-wild audio, with Swan Forced Aligner for pause-aware word-level alignment and RobustMegaTTS3 for pronunciation hard cases. Built on these data, SwanVoice is a unified zero-shot TTS model for 1-4 speakers, combining a 25 Hz VAE, raw-text conditioning with pause-aware symbols and pinyin substitution, and a flow-matching DiT with speaker-turn conditioning. We further adopt curriculum learning to balance monologue quality, dialogue controllability, and expressiveness, and apply DiffusionNFT post-training to improve robustness and speaker similarity. Experiments show competitive performance in both monologue and dialogue generation, with strong expressiveness and cross-turn consistency.";
 
+const benchAbstractText =
+  'Recent advances in speech generation have enabled high-fidelity synthesis, yet systematic evaluation of models under long-context conditions remains largely underexplored. A comprehensive evaluation benchmark for long-form speech is indispensable for two reasons: 1) existing test scenarios are often confined to limited domains, creating a significant gap with the diverse downstream applications; 2) existing metrics overlook critical long-text factors such as consistency and coherence, failing to generalize reliably. To this end, we propose SwanBench-Speech, a comprehensive benchmark that decomposes "long-form speech quality" into specific, disentangled dimensions. SwanBench-Speech has three key properties. <strong>1) Rich speech scenarios</strong>: Focusing on long-form speech generation and dialog generation, SwanBench-Speech covers acoustics, semantics, and expressiveness challenges, and consists of 1,101 samples spanning 17 common speech scenarios; <strong>2) Comprehensive evaluation dimensions</strong>: Along the acoustics, semantics, and expressiveness axes, SwanBench-Speech defines an automated evaluation protocol with seven metrics to provide a comprehensive, accurate, and standardized assessment; <strong>3) Valuable Insights</strong>: Through extensive experiments, we reveal that current models still struggle in highly expressive scenarios and exhibit a notable gap in consistency and hierarchy compared to real recordings.';
+
 const demoGroups = [
   {
     index: "01",
@@ -183,7 +186,7 @@ const projects = [
     subtitle:
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
     description:
-      "A benchmark surface reserved for metrics, comparison samples, and model analysis.",
+      "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
     status: "Coming next",
   },
@@ -202,7 +205,16 @@ function arrowLink(label, href) {
     </a>`;
 }
 
-function hero(title, body, ctaLabel, ctaHref) {
+function affiliationLogo(src, alt, className = "") {
+  return `<img${className ? ` class="${className}"` : ""} src="${src}" alt="${alt}" />`;
+}
+
+function hero(title, body, ctaLabel, ctaHref, extraAffiliations = []) {
+  const affiliationLogos = [
+    affiliationLogo("./assets/bytedance-logo-05sW5bB1.svg", "ByteDance"),
+    ...extraAffiliations,
+  ].join("");
+
   return `
     <section class="hero">
       <div class="hero-inner">
@@ -210,7 +222,7 @@ function hero(title, body, ctaLabel, ctaHref) {
         ${body ? `<p>${body}</p>` : ""}
         <div class="affiliation">
           <span>Affiliation</span>
-          <img src="./assets/bytedance-logo-05sW5bB1.svg" alt="ByteDance" />
+          <div class="affiliation-logos">${affiliationLogos}</div>
         </div>
         ${arrowLink(ctaLabel, ctaHref)}
       </div>
@@ -323,7 +335,7 @@ function renderSwanVoice() {
     ${hero(
       "SwanVoice",
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
-      "Jump to demos",
+      "Jump to Demos",
       "#swanvoice-demo"
     )}
 
@@ -350,7 +362,7 @@ function renderSwanVoice() {
     <section id="swanvoice-demo" class="section muted-section">
       <div class="section-inner demo-shell">
         <div class="center-copy">
-          <h2>Demo</h2>
+          <h2>Demos</h2>
           <p>
             Reference audio is shown before each generated sample. The generated
             row is highlighted to make comparisons faster.
@@ -366,25 +378,51 @@ function renderBench() {
     ${hero(
       "SwanBench-Speech",
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
-      "Back to SwanVoice",
-      "#swanvoice"
+      "Jump to Demos",
+      "#bench-demos",
+      [
+        affiliationLogo(
+          "./assets/zhejiang-university.svg",
+          "Zhejiang University",
+          "zhejiang-logo"
+        ),
+      ]
     )}
     <section class="section">
-      <div class="section-inner bench-note">
-        <h2>Benchmark page placeholder</h2>
-        <p>
-          This page is reserved for SwanBench-Speech results, metrics, and
-          comparison samples. The navigation is already in place so the site can
-          grow without changing the visual system.
-        </p>
+      <div class="section-inner overview-stack">
+        <div class="center-copy">
+          <h2>Benchmark overview</h2>
+          <p>
+            SwanBench-Speech evaluates long-form speech generation across
+            scenario coverage, automatic metrics, and model behavior analysis.
+          </p>
+        </div>
+        <div class="media-frame pipeline-frame compact">
+          <img src="./assets/swanbench-speech.png" alt="SwanBench-Speech benchmark overview" />
+        </div>
+        <div class="abstract-panel">
+          <h2>Abstract</h2>
+          <p>${benchAbstractText}</p>
+        </div>
+      </div>
+    </section>
+    <section id="bench-demos" class="section muted-section">
+      <div class="section-inner demo-shell bench-demo-shell">
+        <div class="center-copy">
+          <h2>Demos</h2>
+          <p>
+            Evaluation samples and comparison audio will be added here with the
+            SwanBench-Speech release.
+          </p>
+        </div>
       </div>
     </section>`;
 }
 
 function currentRoute() {
   const hash = window.location.hash.replace("#", "");
-  if (hash === "swanvoice") return "swanvoice";
-  if (hash === "bench") return "bench";
+  if (hash === "swanvoice" || hash === "swanvoice-demo") return "swanvoice";
+  if (hash === "bench" || hash === "bench-demos") return "bench";
   return "home";
 }
 
@@ -395,6 +433,7 @@ function setActiveNav(route) {
 }
 
 function render() {
+  const hash = window.location.hash.replace("#", "");
   const route = currentRoute();
   const app = document.getElementById("app");
   app.innerHTML =
@@ -405,6 +444,14 @@ function render() {
         : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
+  requestAnimationFrame(() => {
+    const target = document.getElementById(hash);
+    if (target) {
+      target.scrollIntoView({ block: "start" });
+    } else {
+      window.scrollTo({ top: 0 });
+    }
+  });
   document.title =
     route === "swanvoice"
       ? "SwanAIGC | SwanVoice"
