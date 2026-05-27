@@ -688,7 +688,13 @@ function renderSwanSphere() {
       "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
       "Jump to Demos",
       "#swansphere-demo",
-      [],
+      [
+        affiliationLogo(
+          "./assets/zhejiang-university.svg",
+          "Zhejiang University",
+          "zhejiang-logo"
+        ),
+      ],
       paperMeta(project),
       project.paperUrl
     )}
