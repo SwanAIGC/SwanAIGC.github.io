@@ -147,6 +147,35 @@ audio {
   outline: none;
 }
 
+@keyframes hero-background-drift {
+  0% {
+    background-position: 48% 48%;
+    transform: scale(1.01) translate3d(-0.8%, -0.6%, 0);
+  }
+
+  45% {
+    background-position: 52% 50%;
+    transform: scale(1.035) translate3d(0.9%, 0.4%, 0);
+  }
+
+  100% {
+    background-position: 49% 53%;
+    transform: scale(1.025) translate3d(-0.3%, 0.9%, 0);
+  }
+}
+
+@keyframes hero-light-current {
+  0% {
+    opacity: 0.34;
+    transform: translate3d(-7%, -1%, 0) skewX(-7deg);
+  }
+
+  100% {
+    opacity: 0.58;
+    transform: translate3d(7%, 1.4%, 0) skewX(-7deg);
+  }
+}
+
 .site-header {
   position: sticky;
   top: 0;
@@ -231,21 +260,51 @@ audio {
 
 .hero {
   position: relative;
+  isolation: isolate;
   display: flex;
   min-height: clamp(420px, 52vh, 560px);
   align-items: center;
   justify-content: center;
   padding: 62px 20px 70px;
   overflow: hidden;
-  background: url("./assets/head_bgd-CJY1zE3x.jpg") center / cover no-repeat;
+  background: #dff3fb;
 }
 
 .hero::before {
   content: "";
   position: absolute;
-  inset: 0;
-  background: var(--hero-overlay);
+  inset: -6%;
+  z-index: 0;
+  background: url("./assets/head_bgd-CJY1zE3x.jpg") center / 112% 112% no-repeat;
+  animation: hero-background-drift 24s ease-in-out infinite alternate;
   pointer-events: none;
+  will-change: transform, background-position;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: -24% -16%;
+  z-index: 0;
+  background:
+    linear-gradient(
+      112deg,
+      transparent 22%,
+      rgba(255, 255, 255, 0.22) 43%,
+      rgba(107, 145, 199, 0.08) 52%,
+      transparent 72%
+    ),
+    linear-gradient(
+      252deg,
+      rgba(215, 161, 180, 0.08),
+      transparent 34%,
+      rgba(107, 145, 199, 0.08)
+    );
+  opacity: 0.48;
+  mix-blend-mode: soft-light;
+  animation: hero-light-current 18s ease-in-out infinite alternate;
+  pointer-events: none;
+  will-change: transform, opacity;
 }
 
 .hero-inner {
@@ -1141,5 +1200,13 @@ audio {
 
   .bench-card-media img {
     max-height: 240px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero::before,
+  .hero::after {
+    animation: none;
+    transform: none;
   }
 }
