@@ -14,35 +14,35 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "GLM-TTS",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/1.wav"
               },
               {
                 "name": "ZipVoice",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/2.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/2.wav"
               },
               {
                 "name": "FishSpeech",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/3.wav"
               },
               {
                 "name": "Minimax",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/4.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/4.wav"
               },
               {
                 "name": "SparkTTS",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/5.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/5.wav"
               },
               {
                 "name": "Seed-TTS",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/6.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/6.wav"
               },
               {
                 "name": "VibeVoice",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/7.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/7.wav"
               },
               {
                 "name": "Gemni",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/8.wav"
               }
             ]
           },
@@ -54,35 +54,35 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "IndexTTS2",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/9.wav"
               },
               {
                 "name": "F5TTS",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/10.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/10.wav"
               },
               {
                 "name": "CosyVoice3",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/11.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/11.wav"
               },
               {
                 "name": "MegaTTS3",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/12.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/12.wav"
               },
               {
                 "name": "CosyVoice2",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/13.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/13.wav"
               },
               {
                 "name": "Elenvenlabs",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/14.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/14.wav"
               },
               {
                 "name": "InworldTTS",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/15.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/15.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/mono_speaker/16.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/mono_speaker/16.wav"
               }
             ]
           }
@@ -101,23 +101,23 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/1.wav"
               },
               {
                 "name": "Elevenlabs",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/2.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/2.wav"
               },
               {
                 "name": "MOSS-TTSD",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/3.wav"
               },
               {
                 "name": "FireRedTTS2",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/4.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/4.wav"
               },
               {
                 "name": "MoonCast",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/5.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/5.wav"
               }
             ]
           },
@@ -129,27 +129,27 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/6.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/6.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/7.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/7.wav"
               },
               {
                 "name": "Seed-TTS-Podcast",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/8.wav"
               },
               {
                 "name": "SoulX-Podcast",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/9.wav"
               },
               {
                 "name": "VibeVoice",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/10.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/10.wav"
               },
               {
                 "name": "ZipVoice Dialogue",
-                "audio": "./swanbench-speech-demo/assets/wav/dimensions/two_speaker/11.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/dimensions/two_speaker/11.wav"
               }
             ]
           }
@@ -175,15 +175,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/elevenlabs_mono_podcast_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/elevenlabs_mono_podcast_en_3.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/gemini_mono_podcast_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/gemini_mono_podcast_en_3.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/chatgpt_mono_podcast_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/chatgpt_mono_podcast_en_3.wav"
               }
             ]
           },
@@ -196,15 +196,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/elevenlabs_mono_audiobook_zh_7.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/elevenlabs_mono_audiobook_zh_7.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/gemini_mono_audiobook_zh_7.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/gemini_mono_audiobook_zh_7.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/chatgpt_mono_audiobook_zh_7.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/acoustic/chatgpt_mono_audiobook_zh_7.wav"
               }
             ]
           },
@@ -217,15 +217,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/elevenlabs_mono_lesson_en_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/elevenlabs_mono_lesson_en_1.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/gemini_mono_lesson_en_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/gemini_mono_lesson_en_1.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/chatgpt_mono_lesson_en_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/chatgpt_mono_lesson_en_1.wav"
               }
             ]
           },
@@ -238,15 +238,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/elevenlabs_mono_news_zh_15.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/elevenlabs_mono_news_zh_15.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/gemini_mono_news_zh_15.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/gemini_mono_news_zh_15.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/chatgpt_mono_news_zh_15.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/semantic/chatgpt_mono_news_zh_15.wav"
               }
             ]
           },
@@ -259,15 +259,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/elevenlabs_mono_speech_en_18.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/elevenlabs_mono_speech_en_18.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/gemini_mono_speech_en_18.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/gemini_mono_speech_en_18.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/chatgpt_mono_speech_en_18.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/chatgpt_mono_speech_en_18.wav"
               }
             ]
           },
@@ -280,15 +280,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/elevenlabs_mono_talk_show_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/elevenlabs_mono_talk_show_zh_8.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/gemini_mono_talk_show_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/gemini_mono_talk_show_zh_8.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/chatgpt_mono_talk_show_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/mono_speaker/expressive/chatgpt_mono_talk_show_zh_8.wav"
               }
             ]
           }
@@ -306,15 +306,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/elevenlabs_two_interview_en_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/elevenlabs_two_interview_en_9.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/gemini_two_interview_en_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/gemini_two_interview_en_9.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/chatgpt_two_interview_en_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/chatgpt_two_interview_en_9.wav"
               }
             ]
           },
@@ -327,15 +327,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/elevenlabs_two_chat_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/elevenlabs_two_chat_zh_8.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/gemini_two_chat_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/gemini_two_chat_zh_8.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/chatgpt_two_chat_zh_8.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/acoustic/chatgpt_two_chat_zh_8.wav"
               }
             ]
           },
@@ -348,15 +348,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/elevenlabs_two_news_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/elevenlabs_two_news_en_3.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/gemini_two_news_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/gemini_two_news_en_3.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/chatgpt_two_news_en_3.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/chatgpt_two_news_en_3.wav"
               }
             ]
           },
@@ -369,15 +369,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/elevenlabs_two_popular_science_zh_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/elevenlabs_two_popular_science_zh_9.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/gemini_two_popular_science_zh_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/gemini_two_popular_science_zh_9.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/chatgpt_two_popular_science_zh_9.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/semantic/chatgpt_two_popular_science_zh_9.wav"
               }
             ]
           },
@@ -390,15 +390,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/elevenlabs_two_sports_en_2.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/elevenlabs_two_sports_en_2.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/gemini_two_sports_en_2.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/gemini_two_sports_en_2.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/chatgpt_two_sports_en_2.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/chatgpt_two_sports_en_2.wav"
               }
             ]
           },
@@ -411,15 +411,15 @@ window.swanBenchDemoData = {
             "models": [
               {
                 "name": "Elevenlab",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/elevenlabs_two_drama_zh_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/elevenlabs_two_drama_zh_1.wav"
               },
               {
                 "name": "Gemini",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/gemini_two_drama_zh_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/gemini_two_drama_zh_1.wav"
               },
               {
                 "name": "OpenAI",
-                "audio": "./swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/chatgpt_two_drama_zh_1.wav"
+                "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/scenarios/two_speaker/expressive/chatgpt_two_drama_zh_1.wav"
               }
             ]
           }
@@ -440,49 +440,49 @@ window.swanBenchDemoData = {
             "step": 1,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/1.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/1.wav"
           },
           {
             "step": 2,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/2.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/2.wav"
           },
           {
             "step": 3,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗?",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗?",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/3.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/3.wav"
           },
           {
             "step": 4,
             "textHtml": "<strong>Reference text:</strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/4.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/4.wav"
           },
           {
             "step": 5,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊,说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊,说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/5.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/5.wav"
           },
           {
             "step": 6,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/6.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/6.wav"
           },
           {
             "step": 7,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课, 我学那个资本论, 什么资本会无情的压榨你，剥削你的剩余价值, 资本来到世间，从头到脚都流着血跟肮脏的东西。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课, 我学那个资本论, 什么资本会无情的压榨你，剥削你的剩余价值, 资本来到世间，从头到脚都流着血跟肮脏的东西。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/7.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/7.wav"
           },
           {
             "step": 8,
             "textHtml": "<strong>Reference text:</strong> 啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课，我学那个资本论，什么资本会无情的压榨你，剥削你的剩余价值，资本来到世间，从头到脚都流着血跟肮脏的东西，我下午去面试的时候，往那一坐，我可以加班，什么亚里士多德呀，多劳才能多得。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课，我学那个资本论，什么资本会无情的压榨你，剥削你的剩余价值，资本来到世间，从头到脚都流着血跟肮脏的东西，我下午去面试的时候，往那一坐，我可以加班，什么亚里士多德呀，多劳才能多得。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/8.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/sparktts/8.wav"
           }
         ]
       },
@@ -493,49 +493,49 @@ window.swanBenchDemoData = {
             "step": 1,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/1.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/1.wav"
           },
           {
             "step": 2,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/2.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/2.wav"
           },
           {
             "step": 3,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/3.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/3.wav"
           },
           {
             "step": 4,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/4.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/4.wav"
           },
           {
             "step": 5,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/5.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/5.wav"
           },
           {
             "step": 6,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/6.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/6.wav"
           },
           {
             "step": 7,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle. Let that sink in. And the major culprit here is the data centers, warehouses full of computer servers that AI needs to function.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle. Let that sink in. And the major culprit here is the data centers, warehouses full of computer servers that AI needs to function.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/7.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/7.wav"
           },
           {
             "step": 8,
             "textHtml": "<strong>Reference text: </strong>Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle. Let that sink in. And the major culprit here is the data centers, warehouses full of computer servers that AI needs to function. Tech companies are trying to build more of these data centers, but people who live nearby are protesting them, often saying that they're going to compete for their electricity and use up their water.",
             "referenceText": "Hi, I'm Rose Rimmler. I'm filling in for Wendy Zuckerman. And this is Science versus. This is the show that pits facts against filling the world with AI data centers. Today on the show AI and the Environment, Lately we've been hearing a lot about how power hungry AI is. AI uses a ton of electricity, straining the nation's aging power grid and creating more planet-warming emissions, and how thirsty it is. The amount of water that AI uses is astonishing. Asking ChatGPT to write one e-mail is the equivalent of pouring out an entire water bottle. Let that sink in. And the major culprit here is the data centers, warehouses full of computer servers that AI needs to function. Tech companies are trying to build more of these data centers, but people who live nearby are protesting them, often saying that they're going to compete for their electricity and use up their water.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/8.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_1/MegaTTS3/8.wav"
           }
         ]
       },
@@ -546,49 +546,49 @@ window.swanBenchDemoData = {
             "step": 1,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right?",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right?",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/1.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/1.wav"
           },
           {
             "step": 2,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/2.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/2.wav"
           },
           {
             "step": 3,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/3.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/3.wav"
           },
           {
             "step": 4,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\"",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\"",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/4.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/4.wav"
           },
           {
             "step": 5,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/5.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/5.wav"
           },
           {
             "step": 6,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/6.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/6.wav"
           },
           {
             "step": 7,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again. And that's the story of how I lost my mind. The end. I just wanted my daughters to take a little ownership for getting out the door in time. But then I remembered something I teach management teams: You can't inspire accountability in others until you model it yourself. That's when I realized I wasn't taking any accountability for this problem.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again. And that's the story of how I lost my mind. The end. I just wanted my daughters to take a little ownership for getting out the door in time. But then I remembered something I teach management teams: You can't inspire accountability in others until you model it yourself. That's when I realized I wasn't taking any accountability for this problem.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/7.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/7.wav"
           },
           {
             "step": 8,
             "textHtml": "<strong>Reference text: </strong>Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again. And that's the story of how I lost my mind. The end. I just wanted my daughters to take a little ownership for getting out the door in time. But then I remembered something I teach management teams: You can't inspire accountability in others until you model it yourself. That's when I realized I wasn't taking any accountability for this problem. I was blaming it totally on my daughters. So I tried a different approach and looked in the mirror. What was I doing or not doing that may be contributing to this problem? Then it hit me. I knew when they needed to be finished with breakfast, dressed, groomed, and ready to leave. But did they? I also knew what time it was. But there were no clocks in their bathrooms. Which I discovered is like a different dimension for my girls where time ceases to exist.",
             "referenceText": "Are there any other parents here who have struggled to get your kids out the door on time? Yeah, so you know, right? It's like herding kittens. My wife and I would start nagging our three daughters long before it was time to leave, but that obviously wasn't working because we were always late for everything. But one day was a complete gong show. Five minutes before we needed to leave for an important event, I found my oldest daughter on the porch reading, my middle daughter was playing the piano, and my youngest daughter wasn't wearing any socks. So I told them, \\\"Stop reading, stop playing the piano, put on your socks, and everybody get in the car.\\\" Five minutes later, nobody was in the car. On my way to help my youngest daughter wear her socks, I noticed my oldest daughter was still on the porch reading. Now I'm starting to lose it. Her response: \\\"I didn't hear you.\\\" But before I could say a word, I heard the piano start playing again. And that's the story of how I lost my mind. The end. I just wanted my daughters to take a little ownership for getting out the door in time. But then I remembered something I teach management teams: You can't inspire accountability in others until you model it yourself. That's when I realized I wasn't taking any accountability for this problem. I was blaming it totally on my daughters. So I tried a different approach and looked in the mirror. What was I doing or not doing that may be contributing to this problem? Then it hit me. I knew when they needed to be finished with breakfast, dressed, groomed, and ready to leave. But did they? I also knew what time it was. But there were no clocks in their bathrooms. Which I discovered is like a different dimension for my girls where time ceases to exist.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/8.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_2/cosyvoice2/8.wav"
           }
         ]
       },
@@ -599,49 +599,49 @@ window.swanBenchDemoData = {
             "step": 1,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/1.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/1.wav"
           },
           {
             "step": 2,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/2.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/2.wav"
           },
           {
             "step": 3,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/3.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/3.wav"
           },
           {
             "step": 4,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me?",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me?",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/4.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/4.wav"
           },
           {
             "step": 5,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/5.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/5.wav"
           },
           {
             "step": 6,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/6.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/6.wav"
           },
           {
             "step": 7,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again. This time, I know I should be single longer than just two or three months — maybe for a year.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again. This time, I know I should be single longer than just two or three months — maybe for a year.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/7.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/7.wav"
           },
           {
             "step": 8,
             "textHtml": "<strong>Reference text: </strong>We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again. This time, I know I should be single longer than just two or three months — maybe for a year. I feel it in my gut, and I know it's right, but it's daunting.",
             "referenceText": "We really deeply loved each other. The way it ended was so pleasant that I think I can talk about it without crying right now. It's only been a week, and I can talk about it because it was mutual. We communicated, got closure, and decided to remain friends. It was as perfect a breakup as possible, but it's still tough. So, what does this mean for me? Well, now I'm single, and being single is interesting because I haven't been single much in my life since I was 17. I've dated pretty consistently, with a few boyfriends, and very short breaks in between, so I haven't really been single. It's a little daunting to be in this place again. This time, I know I should be single longer than just two or three months — maybe for a year. I feel it in my gut, and I know it's right, but it's daunting.",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/8.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_en_3/F5TTS/8.wav"
           }
         ]
       },
@@ -652,49 +652,49 @@ window.swanBenchDemoData = {
             "step": 1,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/1.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/1.wav"
           },
           {
             "step": 2,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/2.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/2.wav"
           },
           {
             "step": 3,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗？",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗？",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/3.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/3.wav"
           },
           {
             "step": 4,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/4.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/4.wav"
           },
           {
             "step": 5,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊,说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊,说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/5.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/5.wav"
           },
           {
             "step": 6,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/6.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/6.wav"
           },
           {
             "step": 7,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课, 我学那个资本论, 什么资本会无情的压榨你，剥削你的剩余价值, 资本来到世间，从头到脚都流着血跟肮脏的东西。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课, 我学那个资本论, 什么资本会无情的压榨你，剥削你的剩余价值, 资本来到世间，从头到脚都流着血跟肮脏的东西。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/7.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/7.wav"
           },
           {
             "step": 8,
             "textHtml": "<strong>Reference text: </strong>啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课，我学那个资本论，什么资本会无情的压榨你，剥削你的剩余价值，资本来到世间，从头到脚都流着血跟肮脏的东西，我下午去面试的时候，往那一坐，我可以加班，什么亚里士多德呀，多劳才能多得。",
             "referenceText": "啊我是去年刚刚大学毕业的，我这个大学专业学的是哲学啊，大家一般听到那个反应就是哇，那就是有文化没工作，这个我读哲学确实是不太好找工作，而且我身边有些朋友还会调侃我，说，找不到工作怎么了，你们学哲学的人不是都很通透吗，你虽然找不到工作，但是你可以辩证地看待这个问题啊，我咋辩证啊，说实话我真的一点都不通透，因为我学完哲学吧，跟大家学任何专业一样，还是要出来找工作打工的，我发现现实生活跟我学的不一样的时候，我只会更加矛盾。我那时候找工作的时候，我上午还在上课，我学那个资本论，什么资本会无情的压榨你，剥削你的剩余价值，资本来到世间，从头到脚都流着血跟肮脏的东西，我下午去面试的时候，往那一坐，我可以加班，什么亚里士多德呀，多劳才能多得。",
-            "audio": "./swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/8.wav"
+            "audio": "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanbench-speech-demo/assets/wav/ablation/results_zh_2/vibevoice/8.wav"
           }
         ]
       }

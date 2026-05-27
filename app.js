@@ -207,7 +207,7 @@ const projects = [
     description:
       "A streaming framework for synchronized spatial audio generation from panoramic videos and text prompts.",
     image: "./assets/swansphere.png",
-    status: "Coming soon",
+    status: "Available",
   },
 ];
 
@@ -317,7 +317,7 @@ function renderHome() {
 
 function projectCard(project) {
   const visual = project.image
-    ? `<img src="${project.image}" alt="${project.title} overview" />`
+    ? `<img src="${project.image}" alt="${project.title} overview" loading="lazy" decoding="async" />`
     : `<div class="task-visual" aria-hidden="true">
         <div class="token-row">
           ${Array.from({ length: 28 }, () => "<span></span>").join("")}
@@ -351,10 +351,12 @@ function audioRow(label, src, generated = false) {
   return `
     <div class="audio-row ${generated ? "generated" : ""}">
       <div class="audio-label">${label}</div>
-      <audio controls controlsList="nodownload noplaybackrate" preload="none">
-        <source src="${encodeURI(src)}" type="audio/wav" />
-      </audio>
+      ${lazyAudio(src)}
     </div>`;
+}
+
+function lazyAudio(src) {
+  return `<audio controls controlsList="nodownload noplaybackrate" preload="none" data-src="${encodeURI(src)}" data-audio-type="audio/wav"></audio>`;
 }
 
 function sampleCard(sample, groupTitle) {
@@ -380,15 +382,13 @@ function modelAudio(model) {
   return `
     <div class="bench-model-audio">
       <div class="audio-label">${model.name}</div>
-      <audio controls controlsList="nodownload noplaybackrate" preload="none">
-        <source src="${encodeURI(model.audio)}" type="audio/wav" />
-      </audio>
+      ${lazyAudio(model.audio)}
     </div>`;
 }
 
 function benchComparisonCard(item, meta) {
   const media = item.image
-    ? `<div class="bench-card-media"><img src="${item.image}" alt="${item.title} evaluation overview" /></div>`
+    ? `<div class="bench-card-media"><img src="${item.image}" alt="${item.title} evaluation overview" loading="lazy" decoding="async" /></div>`
     : "";
 
   return `
@@ -418,7 +418,7 @@ function benchSubset(subset, parentTitle) {
   const stats = subset.statsImage
     ? `
       <figure class="bench-stat media-frame">
-        <img src="${subset.statsImage}" alt="${subset.label} statistics" />
+        <img src="${subset.statsImage}" alt="${subset.label} statistics" loading="lazy" decoding="async" />
         <figcaption>${subset.statsCaption}</figcaption>
       </figure>`
     : "";
@@ -454,9 +454,7 @@ function benchAblationRow(row) {
   return `
     <article class="bench-ablation-row">
       <div class="sample-type">Length ${row.step}</div>
-      <audio controls controlsList="nodownload noplaybackrate" preload="none">
-        <source src="${encodeURI(row.audio)}" type="audio/wav" />
-      </audio>
+      ${lazyAudio(row.audio)}
       <div class="target-text bench-ablation-text">${row.textHtml}</div>
     </article>`;
 }
@@ -472,7 +470,7 @@ function benchAblation(data) {
         <p>${data.summary}</p>
       </div>
       <figure class="bench-stat media-frame">
-        <img src="${data.chartImage}" alt="Ablation results over sequence length" />
+        <img src="${data.chartImage}" alt="Ablation results over sequence length" loading="lazy" decoding="async" />
         <figcaption>${data.chartCaption}</figcaption>
       </figure>
       <div class="bench-ablation-grid">
@@ -594,6 +592,18 @@ function renderVoiceDemos() {
     </section>`;
 }
 
+function renderSphereDemos() {
+  if (!window.swanSphereDemos) {
+    return `
+      <div id="swansphere-demo" class="center-copy demo-anchor">
+        <h2>Demos</h2>
+        <p>Demo data is still loading.</p>
+      </div>`;
+  }
+
+  return window.swanSphereDemos.render();
+}
+
 function renderSwanVoice() {
   const project = projects.find((item) => item.route === "swanvoice");
 
@@ -619,7 +629,7 @@ function renderSwanVoice() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swanvoice-structure.png" alt="SwanVoice training and inference procedure" />
+          <img src="./assets/swanvoice-structure.png" alt="SwanVoice training and inference procedure" loading="lazy" decoding="async" />
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
@@ -664,7 +674,7 @@ function renderBench() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swanbench-speech.png" alt="SwanBench-Speech benchmark overview" />
+          <img src="./assets/swanbench-speech.png" alt="SwanBench-Speech benchmark overview" loading="lazy" decoding="async" />
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
@@ -709,7 +719,7 @@ function renderSwanSphere() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swansphere.png" alt="SwanSphere training, SVAC, and ODPO framework" />
+          <img src="./assets/swansphere.png" alt="SwanSphere training, SVAC, and ODPO framework" loading="lazy" decoding="async" />
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
@@ -717,12 +727,9 @@ function renderSwanSphere() {
         </div>
       </div>
     </section>
-    <section id="swansphere-demo" class="section muted-section">
+    <section class="section muted-section">
       <div class="section-inner demo-shell">
-        <div class="center-copy">
-          <h2>Demos</h2>
-          <p>Coming soon.</p>
-        </div>
+        ${renderSphereDemos()}
       </div>
     </section>`;
 }
@@ -746,7 +753,9 @@ function currentRoute() {
   if (
     hash === "swansphere" ||
     hash === "swansphere-overview" ||
-    hash === "swansphere-demo"
+    hash === "swansphere-demo" ||
+    hash === "swansphere-v2sa" ||
+    hash === "swansphere-t2sa"
   ) {
     return "swansphere";
   }
@@ -762,8 +771,16 @@ function setActiveNav(route) {
 function settleHashScroll(app, hash) {
   const benchDemoHash = benchDemoTabs.some((tab) => tab.id === hash);
   const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
+  const sphereDemoHash =
+    hash === "swansphere-v2sa" || hash === "swansphere-t2sa";
   const target = document.getElementById(
-    benchDemoHash ? "bench-demos" : voiceDemoHash ? "swanvoice-demo" : hash
+    benchDemoHash
+      ? "bench-demos"
+      : voiceDemoHash
+        ? "swanvoice-demo"
+        : sphereDemoHash
+          ? hash
+          : hash
   );
   if (!target) {
     window.scrollTo({ top: 0 });
@@ -798,10 +815,101 @@ function settleHashScroll(app, hash) {
   }
 }
 
+const lazyAudioState = {
+  loaded: [],
+  maxLoaded: 12,
+  observer: null,
+};
+
+function unloadLazyAudio(audio) {
+  audio.pause();
+  audio.removeAttribute("src");
+  audio.replaceChildren();
+  audio.dataset.loaded = "false";
+  audio.load();
+}
+
+function trimLazyAudioCache(activeAudio) {
+  lazyAudioState.loaded = lazyAudioState.loaded.filter(
+    (audio) => audio.isConnected && audio.dataset.loaded === "true"
+  );
+
+  while (lazyAudioState.loaded.length > lazyAudioState.maxLoaded) {
+    const candidate = lazyAudioState.loaded.find(
+      (audio) => audio !== activeAudio && audio.paused
+    );
+    if (!candidate) return;
+    lazyAudioState.loaded = lazyAudioState.loaded.filter(
+      (audio) => audio !== candidate
+    );
+    unloadLazyAudio(candidate);
+  }
+}
+
+function loadLazyAudio(audio) {
+  if (audio.dataset.loaded === "true") return;
+  const src = audio.dataset.src;
+  if (!src) return;
+
+  audio.replaceChildren();
+  const source = document.createElement("source");
+  source.src = src;
+  source.type = audio.dataset.audioType || "audio/wav";
+  audio.appendChild(source);
+  audio.dataset.loaded = "true";
+  audio.preload = "metadata";
+  audio.load();
+
+  lazyAudioState.loaded = lazyAudioState.loaded.filter((item) => item !== audio);
+  lazyAudioState.loaded.push(audio);
+  trimLazyAudioCache(audio);
+}
+
+function initLazyAudio(root) {
+  if (!lazyAudioState.observer && "IntersectionObserver" in window) {
+    lazyAudioState.observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) loadLazyAudio(entry.target);
+        });
+      },
+      { rootMargin: "220px 0px", threshold: 0.01 }
+    );
+  }
+
+  root.querySelectorAll("audio[data-src]").forEach((audio) => {
+    if (audio.dataset.lazyAudioInit === "true") return;
+    audio.dataset.lazyAudioInit = "true";
+    audio.dataset.loaded = "false";
+
+    lazyAudioState.observer?.observe(audio);
+    audio.addEventListener("pointerdown", () => loadLazyAudio(audio));
+    audio.addEventListener("focus", () => loadLazyAudio(audio));
+    audio.addEventListener("keydown", () => loadLazyAudio(audio));
+    audio.addEventListener("play", () => {
+      loadLazyAudio(audio);
+      root.querySelectorAll("audio").forEach((other) => {
+        if (other !== audio) other.pause();
+      });
+      trimLazyAudioCache(audio);
+    });
+    audio.addEventListener("ended", () => trimLazyAudioCache(audio));
+    audio.addEventListener("error", () => trimLazyAudioCache(audio));
+  });
+}
+
+function resetLazyAudio() {
+  lazyAudioState.observer?.disconnect();
+  lazyAudioState.observer = null;
+  lazyAudioState.loaded = [];
+}
+
 function render() {
   const hash = window.location.hash.replace("#", "");
   const route = currentRoute();
   const app = document.getElementById("app");
+  window.swanSphereDemos?.stopAll?.();
+  resetLazyAudio();
   app.innerHTML =
     route === "swanvoice"
       ? renderSwanVoice()
@@ -812,7 +920,11 @@ function render() {
           : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
+  initLazyAudio(app);
   settleHashScroll(app, hash);
+  if (route === "swansphere") {
+    window.swanSphereDemos?.init?.();
+  }
   document.title =
     route === "swanvoice"
       ? "SwanAIGC | SwanVoice"
