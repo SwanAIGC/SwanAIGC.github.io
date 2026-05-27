@@ -4,6 +4,9 @@ const abstractText =
 const benchAbstractText =
   'Recent advances in speech generation have enabled high-fidelity synthesis, yet systematic evaluation of models under long-context conditions remains largely underexplored. A comprehensive evaluation benchmark for long-form speech is indispensable for two reasons: 1) existing test scenarios are often confined to limited domains, creating a significant gap with the diverse downstream applications; 2) existing metrics overlook critical long-text factors such as consistency and coherence, failing to generalize reliably. To this end, we propose SwanBench-Speech, a comprehensive benchmark that decomposes "long-form speech quality" into specific, disentangled dimensions. SwanBench-Speech has three key properties. <strong>1) Rich speech scenarios</strong>: Focusing on long-form speech generation and dialog generation, SwanBench-Speech covers acoustics, semantics, and expressiveness challenges, and consists of 1,101 samples spanning 17 common speech scenarios; <strong>2) Comprehensive evaluation dimensions</strong>: Along the acoustics, semantics, and expressiveness axes, SwanBench-Speech defines an automated evaluation protocol with seven metrics to provide a comprehensive, accurate, and standardized assessment; <strong>3) Valuable Insights</strong>: Through extensive experiments, we reveal that current models still struggle in highly expressive scenarios and exhibit a notable gap in consistency and hierarchy compared to real recordings.';
 
+const sphereAbstractText =
+  "Real-time and accurate spatial audio generation is pivotal for delivering an immersive experience. However, existing spatial audio synthesis technologies are often encumbered by a tradeoff between generation quality and high inference latency, as well as difficulty in capturing precise spatial information from multimodal inputs. To address these challenges, we propose SwanSphere, a unified streaming framework for high-fidelity spatial audio generation from panoramic videos and text prompts. SwanSphere mainly makes the following contributions: <strong>1)</strong> We introduce a causal autoregressive diffusion transformer architecture that enables streaming high-quality spatial audio generation. <strong>2)</strong> We design a Spatial Video-Audio Contrastive (SVAC) learning strategy to align the video encoder with the acoustic domain, and further employ a multi-objective online direct preference optimization (ODPO) scheme, resulting in strong spatial perception and robust multimodal spatial audio synthesis. <strong>3)</strong> To alleviate the current scarcity of spatial audio datasets, we also develop an automated annotation pipeline for generating detailed spatial captions. Experimental results demonstrate that SwanSphere achieves superior performance in both video-to-spatial and text-to-spatial audio generation tasks.";
+
 const demoGroups = [
   {
     index: "01",
@@ -193,6 +196,18 @@ const projects = [
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
     status: "Available",
+  },
+  {
+    route: "swansphere",
+    title: "SwanSphere",
+    subtitle:
+      "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
+    venue: "ICML 2026",
+    paperUrl: "",
+    description:
+      "A streaming framework for synchronized spatial audio generation from panoramic videos and text prompts.",
+    image: "./assets/swansphere.png",
+    status: "Coming soon",
   },
 ];
 
@@ -664,6 +679,48 @@ function renderBench() {
     </section>`;
 }
 
+function renderSwanSphere() {
+  const project = projects.find((item) => item.route === "swansphere");
+
+  return `
+    ${hero(
+      "SwanSphere",
+      "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
+      "Jump to Demos",
+      "#swansphere-demo",
+      [],
+      paperMeta(project),
+      project.paperUrl
+    )}
+    <section id="swansphere-overview" class="section">
+      <div class="section-inner overview-stack">
+        <div class="center-copy">
+          <h2>Framework overview</h2>
+          <p>
+            SwanSphere combines streaming spatial audio generation, SVAC
+            alignment, and multi-objective ODPO for synchronized video-to-spatial
+            and text-to-spatial audio synthesis.
+          </p>
+        </div>
+        <div class="media-frame pipeline-frame compact">
+          <img src="./assets/swansphere.png" alt="SwanSphere training, SVAC, and ODPO framework" />
+        </div>
+        <div class="abstract-panel">
+          <h2>Abstract</h2>
+          <p>${sphereAbstractText}</p>
+        </div>
+      </div>
+    </section>
+    <section id="swansphere-demo" class="section muted-section">
+      <div class="section-inner demo-shell">
+        <div class="center-copy">
+          <h2>Demos</h2>
+          <p>Coming soon.</p>
+        </div>
+      </div>
+    </section>`;
+}
+
 function currentRoute() {
   const hash = window.location.hash.replace("#", "");
   if (
@@ -680,6 +737,13 @@ function currentRoute() {
     hash === "bench-scenarios" ||
     hash === "bench-ablation"
   ) return "bench";
+  if (
+    hash === "swansphere" ||
+    hash === "swansphere-overview" ||
+    hash === "swansphere-demo"
+  ) {
+    return "swansphere";
+  }
   return "home";
 }
 
@@ -737,7 +801,9 @@ function render() {
       ? renderSwanVoice()
       : route === "bench"
         ? renderBench()
-        : renderHome();
+        : route === "swansphere"
+          ? renderSwanSphere()
+          : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
   settleHashScroll(app, hash);
@@ -746,7 +812,9 @@ function render() {
       ? "SwanAIGC | SwanVoice"
       : route === "bench"
         ? "SwanAIGC | SwanBench-Speech"
-        : "SwanAIGC";
+        : route === "swansphere"
+          ? "SwanAIGC | SwanSphere"
+          : "SwanAIGC";
 }
 
 window.addEventListener("hashchange", render);
