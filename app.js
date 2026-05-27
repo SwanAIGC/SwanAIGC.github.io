@@ -177,14 +177,6 @@ const projects = [
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
     venue: "Technical Report",
     paperUrl: "",
-    authors: [
-      { name: "Ruiqi Li", equal: true },
-      { name: "Yu Zhang", equal: true },
-      { name: "Changhao Pan", equal: true },
-      { name: "Ke Lei" },
-      { name: "Xiang Yin", corresponding: true },
-      { name: "Cheng Yang" },
-    ],
     description:
       "A unified zero-shot TTS model for long-form monologue and 1-4 speaker dialogue generation.",
     image: "./assets/swanvoice-structure.png",
@@ -197,23 +189,6 @@ const projects = [
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
     venue: "ACL 2026",
     paperUrl: "",
-    authors: [
-      { name: "Changhao Pan", equal: true },
-      { name: "Rui Yang", equal: true },
-      { name: "Han Wang", equal: true },
-      { name: "Zhuan Zhou" },
-      { name: "Xuming He" },
-      { name: "Wenxiang Guo" },
-      { name: "Ziyue Jiang" },
-      { name: "Ruiqi Li" },
-      { name: "Yu Zhang" },
-      { name: "Chenyuhao Wen" },
-      { name: "Ke Lei" },
-      { name: "Xiang Yin" },
-      { name: "Jingyu Lu" },
-      { name: "Zhiyuan Zhu" },
-      { name: "Zhou Zhao", corresponding: true },
-    ],
     description:
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
@@ -255,31 +230,12 @@ function affiliationLogo(src, alt, className = "") {
   return `<img${className ? ` class="${className}"` : ""} src="${src}" alt="${alt}" />`;
 }
 
-function authorMarkup(authors = []) {
-  if (!authors.length) return "";
-
-  const authorItems = authors
-    .map((author) => {
-      const marks = [
-        author.equal ? "<sup>*</sup>" : "",
-        author.corresponding ? "<sup>&dagger;</sup>" : "",
-      ].join("");
-      return `<span>${author.name}${marks}</span>`;
-    })
-    .join("");
-
-  return `
-    <div class="paper-authors">${authorItems}</div>
-    <div class="paper-notes">* Equal contribution &middot; &dagger; Corresponding author</div>`;
-}
-
 function paperMeta(project) {
   if (!project) return "";
 
   return `
     <div class="paper-meta">
       <span class="venue-badge">${project.venue}</span>
-      ${authorMarkup(project.authors)}
     </div>`;
 }
 

@@ -300,34 +300,6 @@ audio {
   text-transform: uppercase;
 }
 
-.paper-authors {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 7px 13px;
-  color: var(--hero-text);
-  font-size: clamp(13px, 1.35vw, 15px);
-  line-height: 1.5;
-  font-weight: 570;
-}
-
-.paper-authors span {
-  white-space: nowrap;
-}
-
-.paper-authors sup {
-  margin-left: 2px;
-  color: var(--arrow-color);
-  font-size: 0.72em;
-  font-weight: 800;
-}
-
-.paper-notes {
-  color: var(--hero-copy);
-  font-size: 12px;
-  font-weight: 560;
-}
-
 .affiliation {
   display: flex;
   align-items: center;
