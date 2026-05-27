@@ -183,6 +183,9 @@ const projects = [
     description:
       "A unified zero-shot TTS model for long-form monologue and 1-4 speaker dialogue generation.",
     image: "./assets/swanvoice-structure.png",
+    imageWebp: "./assets/swanvoice-structure.webp",
+    previewImage: "./assets/swanvoice-structure-preview.png",
+    previewWebp: "./assets/swanvoice-structure-preview.webp",
     status: "Available",
   },
   {
@@ -195,6 +198,9 @@ const projects = [
     description:
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
+    imageWebp: "./assets/swanbench-speech.webp",
+    previewImage: "./assets/swanbench-speech-preview.png",
+    previewWebp: "./assets/swanbench-speech-preview.webp",
     status: "Available",
   },
   {
@@ -207,6 +213,9 @@ const projects = [
     description:
       "A streaming framework for synchronized spatial audio generation from panoramic videos and text prompts.",
     image: "./assets/swansphere.png",
+    imageWebp: "./assets/swansphere.webp",
+    previewImage: "./assets/swansphere-preview.png",
+    previewWebp: "./assets/swansphere-preview.webp",
     status: "Available",
   },
 ];
@@ -243,6 +252,27 @@ function arrowLink(label, href, disabled = false) {
 
 function affiliationLogo(src, alt, className = "") {
   return `<img${className ? ` class="${className}"` : ""} src="${src}" alt="${alt}" />`;
+}
+
+function responsiveImage(
+  src,
+  alt,
+  { webpSrc = "", loading = "lazy", fetchPriority = "" } = {}
+) {
+  const imgAttrs = [
+    `src="${src}"`,
+    `alt="${alt}"`,
+    `loading="${loading}"`,
+    'decoding="async"',
+    fetchPriority ? `fetchpriority="${fetchPriority}"` : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+  const img = `<img ${imgAttrs} />`;
+
+  return webpSrc
+    ? `<picture><source srcset="${webpSrc}" type="image/webp" />${img}</picture>`
+    : img;
 }
 
 function paperMeta(project) {
@@ -317,7 +347,14 @@ function renderHome() {
 
 function projectCard(project) {
   const visual = project.image
-    ? `<img src="${project.image}" alt="${project.title} overview" loading="lazy" decoding="async" />`
+    ? responsiveImage(
+        project.previewImage || project.image,
+        `${project.title} overview`,
+        {
+          webpSrc: project.previewWebp || project.imageWebp,
+          loading: "eager",
+        }
+      )
     : `<div class="task-visual" aria-hidden="true">
         <div class="token-row">
           ${Array.from({ length: 28 }, () => "<span></span>").join("")}
@@ -629,7 +666,11 @@ function renderSwanVoice() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swanvoice-structure.png" alt="SwanVoice training and inference procedure" loading="lazy" decoding="async" />
+          ${responsiveImage(
+            "./assets/swanvoice-structure.png",
+            "SwanVoice training and inference procedure",
+            { webpSrc: "./assets/swanvoice-structure.webp", loading: "eager" }
+          )}
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
@@ -674,7 +715,11 @@ function renderBench() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swanbench-speech.png" alt="SwanBench-Speech benchmark overview" loading="lazy" decoding="async" />
+          ${responsiveImage(
+            "./assets/swanbench-speech.png",
+            "SwanBench-Speech benchmark overview",
+            { webpSrc: "./assets/swanbench-speech.webp", loading: "eager" }
+          )}
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
@@ -719,7 +764,11 @@ function renderSwanSphere() {
           </p>
         </div>
         <div class="media-frame pipeline-frame compact">
-          <img src="./assets/swansphere.png" alt="SwanSphere training, SVAC, and ODPO framework" loading="lazy" decoding="async" />
+          ${responsiveImage(
+            "./assets/swansphere.png",
+            "SwanSphere training, SVAC, and ODPO framework",
+            { webpSrc: "./assets/swansphere.webp", loading: "eager" }
+          )}
         </div>
         <div class="abstract-panel">
           <h2>Abstract</h2>
