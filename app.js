@@ -175,6 +175,16 @@ const projects = [
     title: "SwanVoice",
     subtitle:
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
+    venue: "Technical Report",
+    paperUrl: "",
+    authors: [
+      { name: "Ruiqi Li", equal: true },
+      { name: "Yu Zhang", equal: true },
+      { name: "Changhao Pan", equal: true },
+      { name: "Ke Lei" },
+      { name: "Xiang Yin", corresponding: true },
+      { name: "Cheng Yang" },
+    ],
     description:
       "A unified zero-shot TTS model for long-form monologue and 1-4 speaker dialogue generation.",
     image: "./assets/swanvoice-structure.png",
@@ -185,16 +195,52 @@ const projects = [
     title: "SwanBench-Speech",
     subtitle:
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
+    venue: "ACL 2026",
+    paperUrl: "",
+    authors: [
+      { name: "Changhao Pan", equal: true },
+      { name: "Rui Yang", equal: true },
+      { name: "Han Wang", equal: true },
+      { name: "Zhuan Zhou" },
+      { name: "Xuming He" },
+      { name: "Wenxiang Guo" },
+      { name: "Ziyue Jiang" },
+      { name: "Ruiqi Li" },
+      { name: "Yu Zhang" },
+      { name: "Chenyuhao Wen" },
+      { name: "Ke Lei" },
+      { name: "Xiang Yin" },
+      { name: "Jingyu Lu" },
+      { name: "Zhiyuan Zhu" },
+      { name: "Zhou Zhao", corresponding: true },
+    ],
     description:
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
-    status: "Coming next",
+    status: "Available",
   },
 ];
 
-function arrowLink(label, href) {
+const benchDemoTabs = [
+  { id: "bench-dimensions", label: "Per-Dimensions" },
+  { id: "bench-scenarios", label: "Per-Scenarios" },
+  { id: "bench-ablation", label: "Ablation Study" },
+];
+
+const voiceDemoTabs = [
+  { id: "swanvoice-single", label: "Single Speaker", groupIndex: 0 },
+  { id: "swanvoice-two", label: "Two Speaker", groupIndex: 1 },
+  { id: "swanvoice-four", label: "Four Speaker", groupIndex: 2 },
+];
+
+function arrowLink(label, href, disabled = false) {
+  const tag = disabled ? "span" : "a";
+  const attrs = disabled
+    ? 'class="arrow-link is-disabled" aria-disabled="true"'
+    : `class="arrow-link" href="${href}"`;
+
   return `
-    <a class="arrow-link" href="${href}">
+    <${tag} ${attrs}>
       <span class="circle" aria-hidden="true">
         <svg viewBox="0 0 24 24">
           <path d="M5 12h14"/>
@@ -202,14 +248,50 @@ function arrowLink(label, href) {
         </svg>
       </span>
       <span>${label}</span>
-    </a>`;
+    </${tag}>`;
 }
 
 function affiliationLogo(src, alt, className = "") {
   return `<img${className ? ` class="${className}"` : ""} src="${src}" alt="${alt}" />`;
 }
 
-function hero(title, body, ctaLabel, ctaHref, extraAffiliations = []) {
+function authorMarkup(authors = []) {
+  if (!authors.length) return "";
+
+  const authorItems = authors
+    .map((author) => {
+      const marks = [
+        author.equal ? "<sup>*</sup>" : "",
+        author.corresponding ? "<sup>&dagger;</sup>" : "",
+      ].join("");
+      return `<span>${author.name}${marks}</span>`;
+    })
+    .join("");
+
+  return `
+    <div class="paper-authors">${authorItems}</div>
+    <div class="paper-notes">* Equal contribution &middot; &dagger; Corresponding author</div>`;
+}
+
+function paperMeta(project) {
+  if (!project) return "";
+
+  return `
+    <div class="paper-meta">
+      <span class="venue-badge">${project.venue}</span>
+      ${authorMarkup(project.authors)}
+    </div>`;
+}
+
+function hero(
+  title,
+  body,
+  ctaLabel,
+  ctaHref,
+  extraAffiliations = [],
+  metadata = "",
+  paperHref = null
+) {
   const affiliationLogos = [
     affiliationLogo("./assets/bytedance-logo-05sW5bB1.svg", "ByteDance"),
     ...extraAffiliations,
@@ -220,11 +302,19 @@ function hero(title, body, ctaLabel, ctaHref, extraAffiliations = []) {
       <div class="hero-inner">
         <h1>${title}</h1>
         ${body ? `<p>${body}</p>` : ""}
+        ${metadata}
         <div class="affiliation">
           <span>Affiliation</span>
           <div class="affiliation-logos">${affiliationLogos}</div>
         </div>
-        ${arrowLink(ctaLabel, ctaHref)}
+        <div class="hero-actions">
+          ${arrowLink(ctaLabel, ctaHref)}
+          ${
+            paperHref === null
+              ? ""
+              : arrowLink("Read the Paper", paperHref, !paperHref)
+          }
+        </div>
       </div>
     </section>`;
 }
@@ -274,7 +364,10 @@ function projectCard(project) {
         ${visual}
       </a>
       <div class="project-body">
-        <div class="project-meta">${project.status}</div>
+        <div class="project-meta">
+          <span>${project.status}</span>
+          <span>${project.venue}</span>
+        </div>
         <h3>${project.title}</h3>
         <p class="project-subtitle">${project.subtitle}</p>
         <p>${project.description}</p>
@@ -312,31 +405,236 @@ function sampleCard(sample, groupTitle) {
     </article>`;
 }
 
-function renderSwanVoice() {
-  const groups = demoGroups
-    .map(
-      (group) => `
-        <section class="demo-group">
-          <div class="demo-group-header">
-            <div>
-              <div class="demo-group-index">${group.index}</div>
-              <h3>${group.title}</h3>
-            </div>
-            <p>${group.summary}</p>
-          </div>
-          <div class="sample-grid">
-            ${group.samples.map((sample) => sampleCard(sample, group.title)).join("")}
-          </div>
-        </section>`
-    )
+function modelAudio(model) {
+  return `
+    <div class="bench-model-audio">
+      <div class="audio-label">${model.name}</div>
+      <audio controls controlsList="nodownload noplaybackrate" preload="none">
+        <source src="${encodeURI(model.audio)}" type="audio/wav" />
+      </audio>
+    </div>`;
+}
+
+function benchComparisonCard(item, meta) {
+  const media = item.image
+    ? `<div class="bench-card-media"><img src="${item.image}" alt="${item.title} evaluation overview" /></div>`
+    : "";
+
+  return `
+    <article class="sample-card bench-card">
+      <div class="sample-title">
+        <span>${item.title}</span>
+        <span class="sample-type">${meta}</span>
+      </div>
+      <div class="target-text bench-reference">${item.referenceHtml}</div>
+      ${media}
+      <div class="bench-audio-grid">
+        ${item.models.map(modelAudio).join("")}
+      </div>
+    </article>`;
+}
+
+function benchSubset(subset, parentTitle) {
+  const cards = subset.items
+    .map((item) => {
+      const meta = item.dimension
+        ? `${item.dimension} · ${subset.label}`
+        : `${parentTitle} · ${subset.label}`;
+      return benchComparisonCard(item, meta);
+    })
     .join("");
+
+  const stats = subset.statsImage
+    ? `
+      <figure class="bench-stat media-frame">
+        <img src="${subset.statsImage}" alt="${subset.label} statistics" />
+        <figcaption>${subset.statsCaption}</figcaption>
+      </figure>`
+    : "";
+
+  return `
+    <section class="bench-subset">
+      <div class="bench-subset-header">
+        <h4>${subset.label}</h4>
+        <span>${subset.items.length} samples</span>
+      </div>
+      <div class="sample-grid">${cards}</div>
+      ${stats}
+    </section>`;
+}
+
+function benchSegment(segment, id, index) {
+  return `
+    <section id="${id}" class="demo-group demo-segment bench-segment">
+      <div class="demo-group-header">
+        <div>
+          <div class="demo-group-index">${String(index).padStart(2, "0")}</div>
+          <h3>${segment.title}</h3>
+        </div>
+        <p>${segment.summary}</p>
+      </div>
+      <div class="bench-subset-list">
+        ${segment.subsets.map((subset) => benchSubset(subset, segment.title)).join("")}
+      </div>
+    </section>`;
+}
+
+function benchAblationRow(row) {
+  return `
+    <article class="bench-ablation-row">
+      <div class="sample-type">Length ${row.step}</div>
+      <audio controls controlsList="nodownload noplaybackrate" preload="none">
+        <source src="${encodeURI(row.audio)}" type="audio/wav" />
+      </audio>
+      <div class="target-text bench-ablation-text">${row.textHtml}</div>
+    </article>`;
+}
+
+function benchAblation(data) {
+  return `
+    <section id="bench-ablation" class="demo-group demo-segment bench-segment">
+      <div class="demo-group-header">
+        <div>
+          <div class="demo-group-index">03</div>
+          <h3>${data.title}</h3>
+        </div>
+        <p>${data.summary}</p>
+      </div>
+      <figure class="bench-stat media-frame">
+        <img src="${data.chartImage}" alt="Ablation results over sequence length" />
+        <figcaption>${data.chartCaption}</figcaption>
+      </figure>
+      <div class="bench-ablation-grid">
+        ${data.groups
+          .map(
+            (group) => `
+              <section class="bench-ablation-group">
+                <div class="bench-subset-header">
+                  <h4>${group.model}</h4>
+                  <span>${group.rows.length} lengths</span>
+                </div>
+                <div class="bench-ablation-list">
+                  ${group.rows.map(benchAblationRow).join("")}
+                </div>
+              </section>`
+          )
+          .join("")}
+      </div>
+    </section>`;
+}
+
+function activeBenchDemoId() {
+  const hash = window.location.hash.replace("#", "");
+  return benchDemoTabs.some((tab) => tab.id === hash)
+    ? hash
+    : "bench-dimensions";
+}
+
+function demoTabNav(tabs, activeId, label) {
+  return `
+    <div class="demo-tab-nav" aria-label="${label}">
+      ${tabs
+        .map(
+          (tab) => `
+            <a
+              class="${tab.id === activeId ? "is-active" : ""}"
+              href="#${tab.id}"
+              ${tab.id === activeId ? 'aria-current="page"' : ""}
+            >${tab.label}</a>`
+        )
+        .join("")}
+    </div>`;
+}
+
+function benchDemoNav(activeId) {
+  return demoTabNav(
+    benchDemoTabs,
+    activeId,
+    "SwanBench-Speech demo sections"
+  );
+}
+
+function activeVoiceDemoId() {
+  const hash = window.location.hash.replace("#", "");
+  return voiceDemoTabs.some((tab) => tab.id === hash)
+    ? hash
+    : "swanvoice-single";
+}
+
+function voiceDemoNav(activeId) {
+  return demoTabNav(voiceDemoTabs, activeId, "SwanVoice demo sections");
+}
+
+function renderBenchDemos() {
+  const data = window.swanBenchDemoData;
+  if (!data) {
+    return `
+      <div class="center-copy">
+        <h2>Demos</h2>
+        <p>Demo data is still loading.</p>
+      </div>`;
+  }
+
+  const activeId = activeBenchDemoId();
+  const activeSegment =
+    activeId === "bench-scenarios"
+      ? benchSegment(data.scenarios, "bench-scenarios", 2)
+      : activeId === "bench-ablation"
+        ? benchAblation(data.ablation)
+        : benchSegment(data.dimensions, "bench-dimensions", 1);
+
+  return `
+    <div id="bench-demos" class="center-copy demo-anchor">
+      <h2>Demos</h2>
+      <p>
+        Evaluation demos are split into the original SwanBench-Speech sections
+        so each page stays compact.
+      </p>
+      ${benchDemoNav(activeId)}
+    </div>
+    ${activeSegment}`;
+}
+
+function renderVoiceDemos() {
+  const activeId = activeVoiceDemoId();
+  const activeTab = voiceDemoTabs.find((tab) => tab.id === activeId);
+  const group = demoGroups[activeTab.groupIndex];
+
+  return `
+    <div id="swanvoice-demo" class="center-copy demo-anchor">
+      <h2>Demos</h2>
+      <p>
+        Reference audio is shown before each generated sample. Speaker settings
+        are split into compact pages for faster comparison.
+      </p>
+      ${voiceDemoNav(activeId)}
+    </div>
+    <section id="${activeId}" class="demo-group demo-segment">
+      <div class="demo-group-header">
+        <div>
+          <div class="demo-group-index">${group.index}</div>
+          <h3>${group.title}</h3>
+        </div>
+        <p>${group.summary}</p>
+      </div>
+      <div class="sample-grid">
+        ${group.samples.map((sample) => sampleCard(sample, group.title)).join("")}
+      </div>
+    </section>`;
+}
+
+function renderSwanVoice() {
+  const project = projects.find((item) => item.route === "swanvoice");
 
   return `
     ${hero(
       "SwanVoice",
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
       "Jump to Demos",
-      "#swanvoice-demo"
+      "#swanvoice-demo",
+      [],
+      paperMeta(project),
+      project.paperUrl
     )}
 
     <section class="section">
@@ -359,21 +657,16 @@ function renderSwanVoice() {
       </div>
     </section>
 
-    <section id="swanvoice-demo" class="section muted-section">
+    <section class="section muted-section">
       <div class="section-inner demo-shell">
-        <div class="center-copy">
-          <h2>Demos</h2>
-          <p>
-            Reference audio is shown before each generated sample. The generated
-            row is highlighted to make comparisons faster.
-          </p>
-        </div>
-        ${groups}
+        ${renderVoiceDemos()}
       </div>
     </section>`;
 }
 
 function renderBench() {
+  const project = projects.find((item) => item.route === "bench");
+
   return `
     ${hero(
       "SwanBench-Speech",
@@ -386,7 +679,9 @@ function renderBench() {
           "Zhejiang University",
           "zhejiang-logo"
         ),
-      ]
+      ],
+      paperMeta(project),
+      project.paperUrl
     )}
     <section class="section">
       <div class="section-inner overview-stack">
@@ -406,23 +701,29 @@ function renderBench() {
         </div>
       </div>
     </section>
-    <section id="bench-demos" class="section muted-section">
+    <section class="section muted-section">
       <div class="section-inner demo-shell bench-demo-shell">
-        <div class="center-copy">
-          <h2>Demos</h2>
-          <p>
-            Evaluation samples and comparison audio will be added here with the
-            SwanBench-Speech release.
-          </p>
-        </div>
+        ${renderBenchDemos()}
       </div>
     </section>`;
 }
 
 function currentRoute() {
   const hash = window.location.hash.replace("#", "");
-  if (hash === "swanvoice" || hash === "swanvoice-demo") return "swanvoice";
-  if (hash === "bench" || hash === "bench-demos") return "bench";
+  if (
+    hash === "swanvoice" ||
+    hash === "swanvoice-demo" ||
+    voiceDemoTabs.some((tab) => tab.id === hash)
+  ) {
+    return "swanvoice";
+  }
+  if (
+    hash === "bench" ||
+    hash === "bench-demos" ||
+    hash === "bench-dimensions" ||
+    hash === "bench-scenarios" ||
+    hash === "bench-ablation"
+  ) return "bench";
   return "home";
 }
 
@@ -430,6 +731,45 @@ function setActiveNav(route) {
   document.querySelectorAll("[data-route]").forEach((link) => {
     link.classList.toggle("is-active", link.dataset.route === route);
   });
+}
+
+function settleHashScroll(app, hash) {
+  const benchDemoHash = benchDemoTabs.some((tab) => tab.id === hash);
+  const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
+  const target = document.getElementById(
+    benchDemoHash ? "bench-demos" : voiceDemoHash ? "swanvoice-demo" : hash
+  );
+  if (!target) {
+    window.scrollTo({ top: 0 });
+    return;
+  }
+
+  const scroll = () => {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+    root.style.scrollBehavior = "auto";
+    target.scrollIntoView({ block: "start", behavior: "auto" });
+    root.style.scrollBehavior = previousScrollBehavior;
+  };
+  const pendingImages = Array.from(app.querySelectorAll("img")).filter(
+    (image) => !image.complete
+  );
+
+  requestAnimationFrame(scroll);
+  window.setTimeout(scroll, 350);
+  window.setTimeout(scroll, 1200);
+  window.setTimeout(scroll, 2400);
+  if (pendingImages.length) {
+    Promise.all(
+      pendingImages.map(
+        (image) =>
+          new Promise((resolve) => {
+            image.addEventListener("load", resolve, { once: true });
+            image.addEventListener("error", resolve, { once: true });
+          })
+      )
+    ).then(scroll);
+  }
 }
 
 function render() {
@@ -444,14 +784,7 @@ function render() {
         : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
-  requestAnimationFrame(() => {
-    const target = document.getElementById(hash);
-    if (target) {
-      target.scrollIntoView({ block: "start" });
-    } else {
-      window.scrollTo({ top: 0 });
-    }
-  });
+  settleHashScroll(app, hash);
   document.title =
     route === "swanvoice"
       ? "SwanAIGC | SwanVoice"
