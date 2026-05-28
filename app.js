@@ -936,7 +936,12 @@ function setActiveNav(route) {
   });
 }
 
+let cancelPendingHashScroll = null;
+
 function settleHashScroll(app, hash) {
+  cancelPendingHashScroll?.();
+  cancelPendingHashScroll = null;
+
   const benchDemoHash = benchDemoTabs.some((tab) => tab.id === hash);
   const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
   const sphereDemoHash =
@@ -955,7 +960,32 @@ function settleHashScroll(app, hash) {
     return;
   }
 
+  let canceled = false;
+  const timers = [];
+  const userEvents = ["wheel", "touchstart", "pointerdown", "keydown"];
+
+  const cleanup = () => {
+    userEvents.forEach((eventName) => {
+      window.removeEventListener(eventName, cancel);
+    });
+    if (cancelPendingHashScroll === cancel) {
+      cancelPendingHashScroll = null;
+    }
+  };
+
+  const cancel = () => {
+    canceled = true;
+    timers.forEach((timer) => window.clearTimeout(timer));
+    cleanup();
+  };
+
+  cancelPendingHashScroll = cancel;
+  userEvents.forEach((eventName) => {
+    window.addEventListener(eventName, cancel, { once: true, passive: true });
+  });
+
   const scroll = () => {
+    if (canceled || !target.isConnected) return;
     const root = document.documentElement;
     const previousScrollBehavior = root.style.scrollBehavior;
     root.style.scrollBehavior = "auto";
@@ -967,9 +997,12 @@ function settleHashScroll(app, hash) {
   );
 
   requestAnimationFrame(scroll);
-  window.setTimeout(scroll, 350);
-  window.setTimeout(scroll, 1200);
-  window.setTimeout(scroll, 2400);
+  timers.push(
+    window.setTimeout(scroll, 350),
+    window.setTimeout(scroll, 1200),
+    window.setTimeout(scroll, 2400),
+    window.setTimeout(cleanup, 2600)
+  );
   if (pendingImages.length) {
     Promise.all(
       pendingImages.map(
