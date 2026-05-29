@@ -20,13 +20,13 @@ const demoGroups = [
         generated: "swanvoice-audio/gen/dsm_single_01.wav",
       },
       {
-        title: "Dehua",
+        title: "刘德华",
         text: "我一直觉得，观众最后记住你的，不一定是最热闹的那场戏，反而常常是一个很轻的眼神，或者一句很普通、但你说得特别真的台词。",
         references: [{ label: "Reference", src: "swanvoice-audio/ref/dehua.wav" }],
         generated: "swanvoice-audio/gen/dehua_single_01.wav",
       },
       {
-        title: "Huang Renxun",
+        title: "Huang",
         text: "For a long time, software adapted to the computer. Now the computer is being redesigned for intelligence itself, and that shift will redefine not just products, but entire industries.",
         references: [
           { label: "Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
@@ -45,7 +45,7 @@ const demoGroups = [
   },
   {
     index: "02",
-    title: "Two Speaker",
+    title: "2 Speakers",
     summary: "Turn-aware dialogue synthesis with speaker identity and affective continuity.",
     samples: [
       {
@@ -64,10 +64,10 @@ const demoGroups = [
       {
         title: "Obama x Trump",
         text:
-          "S1: We move forward when people feel that the system still has room for them, that their voice matters, and that the future is something we build together.\n" +
-          "S2: People want strength, they want results, and they want leaders who do what they say. That is what they care about.\n" +
-          "S1: Strength without trust does not hold for very long. A nation also needs patience, seriousness, and institutions people believe in.\n" +
-          "S2: Institutions are fine, but if they fail the people, then the people want change, and they want it fast.",
+          "S1: We move forward when people feel that the system still has room for them, their voice matters, the future is something we build together.\n" +
+          "S2: If people want strength, they want results, they want leaders who do what they say. That is what they care about.\n" +
+          "S1: But strength without trust does not hold for very long. A nation also needs patience and institutions people believe in.\n" +
+          "S2: Institutions are fine, but if they fail the people, the people want change.",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/obama.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/trump.wav" },
@@ -77,7 +77,7 @@ const demoGroups = [
       {
         title: "胡万 x 六爷",
         text:
-          "S1: 六爷，我承认我说话冲了，可这事总得让我说个明白，不能一句规矩就把人摁死了吧。\n" +
+          "S1: 六爷，我承认我说话直了，可这事总得让我说个明白，不能一句规矩就把人摁死了吧。\n" +
           "S2: 规矩就是规矩！你平时拿它当笑话，到了出事的时候，又想拿道理来救自己？\n" +
           "S1: 那也得分是非黑白，不能谁嗓门大谁就占理。\n" +
           "S2: 你少给我绕弯子，今天这事儿，不是你服不服，是全城的人都在看服不服！",
@@ -93,7 +93,7 @@ const demoGroups = [
           "S1: You keep saying it will calm down, but nothing about this is calming down. It is getting bigger every single day.\n" +
           "S2: I understand that, I do, but making one desperate move tonight could make everything even worse.\n" +
           "S1: Doing nothing is also a move, and right now it is the one that is killing us.\n" +
-          "S2: Then help me find the version of this that does not destroy everything all at once.",
+          "S2: Then help me find the version of this that does not destroy everything all at once, okay?",
         references: [
           { label: "Dialogue Ref", src: "swanvoice-audio/ref/skyler_and_ted.wav" },
         ],
@@ -103,11 +103,11 @@ const demoGroups = [
   },
   {
     index: "03",
-    title: "Four Speaker",
+    title: "4 Speakers",
     summary: "Unified 1-4 speaker generation for long-form group conversations.",
     samples: [
       {
-        title: "Dehua x Jialing x Jay x DZQ",
+        title: "刘德华 x 贾玲 x 周杰伦 x 邓紫棋",
         text:
           "S3: 我觉得这一段旋律先别急着铺满，留一点空，画面会自己长出来。\n" +
           "S1: 对，很多时候最打动人的不是复杂，而是那一点很诚恳、很克制的东西。\n" +
@@ -126,16 +126,16 @@ const demoGroups = [
         generated: "swanvoice-audio/gen/creative_four_01.wav",
       },
       {
-        title: "Huang Renxun x Musk x Obama x Trump",
+        title: "Huang x Musk x Obama x Trump",
         text:
           "S2: If you reason from physics and economics first, a lot of so-called impossible ideas suddenly become straightforward engineering problems.\n" +
           "S4: People do not care about theories if nothing changes in their lives. They want to see results, and they want them quickly.\n" +
           "S1: That is exactly why infrastructure matters. When intelligence becomes cheap and scalable, every industry can be rebuilt around it.\n" +
           "S3: But progress has to feel shared. Innovation is strongest when ordinary citizens believe it expands opportunity instead of narrowing it.\n" +
-          "S4: Opportunity is good, but weakness is expensive. If a system cannot deliver, voters move on.\n" +
+          "S4: Opportunity is good, but weakness is expensive. \n" +
           "S1: Which is why the next era of computing has to be reliable, efficient, and accessible at global scale.\n" +
           "S3: And guided by institutions strong enough to channel power toward the public good.\n" +
-          "S2: Yes, otherwise people optimize for habit, not truth, and the future gets built smaller than it could have been.",
+          "S2: Yes, otherwise I believe people optimize for habit, not truth.",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/musk.wav" },
@@ -145,7 +145,7 @@ const demoGroups = [
         generated: "swanvoice-audio/gen/forum_four_01.wav",
       },
       {
-        title: "大司马 x 卢本伟 x Gazi x 懒羊羊",
+        title: "大司马 x 卢本伟 x 嘎子 x 懒羊羊",
         text:
           "S1: 我就一句话，这波能打，而且必须打，再拖下去节奏全没了！\n" +
           "S4: 可是我觉得现在冲上去会不会有点危险呀，我连闪现都还没想好要往哪边交。\n" +
@@ -164,11 +164,11 @@ const demoGroups = [
         generated: "swanvoice-audio/gen/livestream_four_01.wav",
       },
       {
-        title: "胡万 x Dehua x 灰太狼 x 懒羊羊",
+        title: "胡万 x 刘德华 x 灰太狼 x 懒羊羊",
         text:
           "S1: 都给我安静！事情闹到这个地步，谁也别想装没看见，今天非得把规矩说清楚不可！\n" +
           "S4: 我、我真的只是路过，你们突然都看着我，我现在脑子里一片空白呀。\n" +
-          "S1: 路过不路过先放一边，我现在问的是，到底是谁先开的口，谁先挑的事！\n" +
+          "S1: 路过不路过先放一边，我现在问的是，到底是谁先开的口，谁先搞的事！\n" +
           "S3: 哼，反正不是我一个人的问题，你们一个个都在那儿添油加火，现在倒全想把账算我头上。\n" +
           "S1: 你这话说得轻巧，刚才最响的就是你，现在又想往后缩？\n" +
           "S4: 要不，要不大家先别吵了，坐下来吃点东西再讲道理，好不好？我觉得再吵下去会更乱的。\n" +
@@ -242,8 +242,8 @@ const benchDemoTabs = [
 
 const voiceDemoTabs = [
   { id: "swanvoice-single", label: "Single Speaker", groupIndex: 0 },
-  { id: "swanvoice-two", label: "Two Speaker", groupIndex: 1 },
-  { id: "swanvoice-four", label: "Four Speaker", groupIndex: 2 },
+  { id: "swanvoice-two", label: "2 Speakers", groupIndex: 1 },
+  { id: "swanvoice-four", label: "4 Speakers", groupIndex: 2 },
 ];
 
 const legalPages = {
