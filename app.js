@@ -27,7 +27,7 @@ const demoGroups = [
       },
       {
         title: "Huang Renxun",
-        text: "The next generation of computing will not be defined by a single device. It will be defined by intelligence moving through every system, every workflow, and every creative tool people use.",
+        text: "For a long time, software adapted to the computer. Now the computer is being redesigned for intelligence itself, and that shift will redefine not just products, but entire industries.",
         references: [
           { label: "Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
         ],
@@ -35,7 +35,7 @@ const demoGroups = [
       },
       {
         title: "Emma Watson",
-        text: "If we want technology to serve people well, then we have to keep asking who gets heard, who gets represented, and who is left out of the room.",
+        text: "Progress rarely begins with comfort. It begins when someone chooses to speak clearly, even at the risk of being disliked, because silence has simply become too expensive.",
         references: [
           { label: "Reference", src: "swanvoice-audio/ref/Emmawaltson.wav" },
         ],
@@ -64,7 +64,7 @@ const demoGroups = [
       {
         title: "Obama x Trump",
         text:
-          "S1: Leadership is not just about saying what people want to hear. It is about making hard choices when the room is divided.\n" +
+          "S1: We move forward when people feel that the system still has room for them, that their voice matters, and that the future is something we build together.\n" +
           "S2: People want strength, they want results, and they want leaders who do what they say. That is what they care about.\n" +
           "S1: Strength without trust does not hold for very long. A nation also needs patience, seriousness, and institutions people believe in.\n" +
           "S2: Institutions are fine, but if they fail the people, then the people want change, and they want it fast.",
@@ -114,7 +114,9 @@ const demoGroups = [
           "S4: 那如果我在第二遍把情绪往上推，前面是不是就更要收着一点？\n" +
           "S2: 我会想让角色先站住，先让大家相信她为什么会唱这句，然后情绪再出来。\n" +
           "S1: 对，观众要先被人物带进去，后面的放大才有意义。\n" +
-          "S4: 明白，那我就不一上来全开，先把细节唱给他们听。",
+          "S4: 明白，那我就不一上来全开，先把细节唱给他们听。\n" +
+          "S2: 这样层次会很漂亮，而且最后真正爆发的时候，大家会更有感觉。\n" +
+          "S3: 没错，技术不是为了炫，是为了把那个情绪送到最对的位置。",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/dehua.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/jialing.wav" },
@@ -129,7 +131,11 @@ const demoGroups = [
           "S2: If you reason from physics and economics first, a lot of so-called impossible ideas suddenly become straightforward engineering problems.\n" +
           "S4: People do not care about theories if nothing changes in their lives. They want to see results, and they want them quickly.\n" +
           "S1: That is exactly why infrastructure matters. When intelligence becomes cheap and scalable, every industry can be rebuilt around it.\n" +
-          "S3: But progress has to feel shared. Innovation is strongest when ordinary citizens believe it expands opportunity instead of narrowing it.",
+          "S3: But progress has to feel shared. Innovation is strongest when ordinary citizens believe it expands opportunity instead of narrowing it.\n" +
+          "S4: Opportunity is good, but weakness is expensive. If a system cannot deliver, voters move on.\n" +
+          "S1: Which is why the next era of computing has to be reliable, efficient, and accessible at global scale.\n" +
+          "S3: And guided by institutions strong enough to channel power toward the public good.\n" +
+          "S2: Yes, otherwise people optimize for habit, not truth, and the future gets built smaller than it could have been.",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/musk.wav" },
@@ -144,7 +150,11 @@ const demoGroups = [
           "S1: 我就一句话，这波能打，而且必须打，再拖下去节奏全没了！\n" +
           "S4: 可是我觉得现在冲上去会不会有点危险呀，我连闪现都还没想好要往哪边交。\n" +
           "S1: 危险肯定有，但是问题不在打不打，在于谁先进去、谁在后面补伤害，这个得讲清楚。\n" +
-          "S3: 你俩先别顶牛，我在旁边都听明白了，一个太想冲，一个太想稳，难怪麦里全是火药味。",
+          "S3: 你俩先别顶牛，我在旁边都听明白了，一个太想冲，一个太想稳，难怪麦里全是火药味。\n" +
+          "S4: 那要不我们先数三二一，再一起上？这样至少不会有人突然把我卖在前面。\n" +
+          "S2: 行，数就数，但这次谁都别怂，我一旦进去了，后面必须有人跟。\n" +
+          "S3: 好好好，我作证，这次谁再甩锅，回头直播间我第一个给他复盘。\n" +
+          "S1: 那就这么定，先控视野，再等技能，数到一一起动，别再各打各的。",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/大司马.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/卢本伟.wav" },
@@ -159,7 +169,11 @@ const demoGroups = [
           "S1: 都给我安静！事情闹到这个地步，谁也别想装没看见，今天非得把规矩说清楚不可！\n" +
           "S4: 我、我真的只是路过，你们突然都看着我，我现在脑子里一片空白呀。\n" +
           "S1: 路过不路过先放一边，我现在问的是，到底是谁先开的口，谁先挑的事！\n" +
-          "S3: 哼，反正不是我一个人的问题，你们一个个都在那儿添油加火，现在倒全想把账算我头上。",
+          "S3: 哼，反正不是我一个人的问题，你们一个个都在那儿添油加火，现在倒全想把账算我头上。\n" +
+          "S1: 你这话说得轻巧，刚才最响的就是你，现在又想往后缩？\n" +
+          "S4: 要不，要不大家先别吵了，坐下来吃点东西再讲道理，好不好？我觉得再吵下去会更乱的。\n" +
+          "S2: 吃什么吃！规矩没讲明白，谁都别想散！\n" +
+          "S3: 行啊，那就把话摊开讲，我倒要看看今天到底是谁最不讲理！",
         references: [
           { label: "S1 Reference", src: "swanvoice-audio/ref/让子弹飞胡万.wav" },
           { label: "S2 Reference", src: "swanvoice-audio/ref/dehua.wav" },
