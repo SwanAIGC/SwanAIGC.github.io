@@ -208,7 +208,7 @@ const projects = [
     subtitle:
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
     venue: "ACL 2026",
-    paperUrl: "",
+    paperUrl: "https://arxiv.org/abs/2605.28618",
     description:
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
@@ -413,12 +413,12 @@ function hero(
           <div class="affiliation-logos">${affiliationLogos}</div>
         </div>
         <div class="hero-actions">
-          ${arrowLink(ctaLabel, ctaHref)}
           ${
             paperHref === null
               ? ""
               : arrowLink("Read the Paper", paperHref, !paperHref)
           }
+          ${arrowLink(ctaLabel, ctaHref)}
         </div>
       </div>
     </section>`;
