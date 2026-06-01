@@ -193,7 +193,7 @@ const projects = [
     subtitle:
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
     venue: "Technical Report",
-    paperUrl: "",
+    paperUrl: "https://arxiv.org/abs/2605.30993",
     description:
       "A unified zero-shot TTS model for long-form monologue and 1-4 speaker dialogue generation.",
     image: "./assets/swanvoice-structure.png",
@@ -223,7 +223,7 @@ const projects = [
     subtitle:
       "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
     venue: "ICML 2026",
-    paperUrl: "",
+    paperUrl: "https://arxiv.org/abs/2605.30940",
     description:
       "A streaming framework for synchronized spatial audio generation from panoramic videos and text prompts.",
     image: "./assets/swansphere.png",
