@@ -755,6 +755,88 @@ audio {
   border: 1px solid var(--panel-border);
 }
 
+.swantale-video-card {
+  gap: 16px;
+}
+
+.swantale-video-wrap {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--media-border);
+  border-radius: 8px;
+  background: #07151e;
+}
+
+.swantale-video-poster {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: #07151e;
+  cursor: pointer;
+}
+
+.swantale-video-poster img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.swantale-play-button {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  display: inline-flex;
+  width: 58px;
+  height: 58px;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  border-radius: 50%;
+  background: rgba(7, 21, 30, 0.54);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.22);
+  transform: translate(-50%, -50%);
+  transition: background-color 0.18s ease, transform 0.18s ease;
+}
+
+.swantale-play-button svg {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+  transform: translateX(2px);
+}
+
+.swantale-video-poster:hover .swantale-play-button,
+.swantale-video-poster:focus-visible .swantale-play-button {
+  background: rgba(7, 21, 30, 0.7);
+  transform: translate(-50%, -50%) scale(1.04);
+}
+
+.swantale-video {
+  display: none;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #07151e;
+  object-fit: contain;
+}
+
+.swantale-video-wrap.is-loaded .swantale-video {
+  display: block;
+}
+
+.swantale-video-wrap.is-loaded .swantale-video-poster {
+  display: none;
+}
+
+.swantale-demo-note {
+  margin: 0;
+  color: var(--body-copy);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
 .sample-title {
   display: flex;
   align-items: center;

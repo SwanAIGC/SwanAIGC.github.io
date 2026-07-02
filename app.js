@@ -7,6 +7,18 @@ const benchAbstractText =
 const sphereAbstractText =
   "Real-time and accurate spatial audio generation is pivotal for delivering an immersive experience. However, existing spatial audio synthesis technologies are often encumbered by a tradeoff between generation quality and high inference latency, as well as difficulty in capturing precise spatial information from multimodal inputs. To address these challenges, we propose SwanSphere, a unified streaming framework for high-fidelity spatial audio generation from panoramic videos and text prompts. SwanSphere mainly makes the following contributions: <strong>1)</strong> We introduce a causal autoregressive diffusion transformer architecture that enables streaming high-quality spatial audio generation. <strong>2)</strong> We design a Spatial Video-Audio Contrastive (SVAC) learning strategy to align the video encoder with the acoustic domain, and further employ a multi-objective online direct preference optimization (ODPO) scheme, resulting in strong spatial perception and robust multimodal spatial audio synthesis. <strong>3)</strong> To alleviate the current scarcity of spatial audio datasets, we also develop an automated annotation pipeline for generating detailed spatial captions. Experimental results demonstrate that SwanSphere achieves superior performance in both video-to-spatial and text-to-spatial audio generation tasks.";
 
+const taleAbstractText =
+  "Media speech generation is often needed in animation dubbing, audio drama, movies, advertising, games, podcasts, and short-video production. In these scenarios, creators may need to design voices without reference recordings, control speaker styles with natural language, support acoustic scenes with environments and audio effects, and later reuse the designed voices. Therefore, it is important to support multi-speaker speech and audio generation for both instruct and zero-shot tasks. The instruct task requires a caption of the environment, speaker styles, and fine-grained content, while the zero-shot task uses reference audio together with the same fine-grained content. We propose SwanTale, a multi-speaker expressive speech and audio generation model that supports both zero-shot and instruct tasks. SwanTale introduces SwanVAE, incorporates the Engram mechanism, and designs Swan Unified MoE for multi-task and multi-audio-modality modeling.";
+
+const taleDemo = {
+  title: "Instruct + Zero-Shot Redubbing",
+  video:
+    "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swantale/swantale-redubbing-demo.mp4",
+  poster: "./assets/swantale-redubbing-poster.jpg",
+  note:
+    "This demo combines SwanTale instruct control with zero-shot voice reuse for redubbing. The visual track and background music are kept from the original.",
+};
+
 const demoGroups = [
   {
     index: "01",
@@ -187,6 +199,21 @@ const demoGroups = [
 ];
 
 const projects = [
+  {
+    route: "swantale",
+    title: "SwanTale",
+    subtitle:
+      "Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
+    venue: "Technical Report",
+    paperUrl: "",
+    description:
+      "A unified model for multi-speaker speech and audio generation across instruct and zero-shot media tasks.",
+    image: "./assets/swantale-structure.png",
+    imageWebp: "./assets/swantale-structure.webp",
+    previewImage: "./assets/swantale-structure-preview.png",
+    previewWebp: "./assets/swantale-structure-preview.webp",
+    status: "Demo Preview",
+  },
   {
     route: "swanvoice",
     title: "SwanVoice",
@@ -488,6 +515,57 @@ function projectCard(project) {
     </article>`;
 }
 
+function renderTaleDemo() {
+  return `
+    <div id="swantale-demo" class="center-copy demo-anchor">
+      <h2>Demo</h2>
+      <p>
+        One redubbing example is shown first while the full SwanTale demo set is
+        being prepared.
+      </p>
+    </div>
+    <section id="swantale-redubbing" class="demo-group demo-segment swantale-demo-segment">
+      <div class="demo-group-header">
+        <div>
+          <div class="demo-group-index">01</div>
+          <h3>Redubbing Demo</h3>
+        </div>
+        <p>Instruct control and zero-shot voice reuse in a preserved video scene.</p>
+      </div>
+      <article class="sample-card swantale-video-card">
+        <div class="sample-title">
+          <span>${taleDemo.title}</span>
+          <span class="sample-type">SwanTale</span>
+        </div>
+        <div class="swantale-video-wrap">
+          <button
+            class="swantale-video-poster"
+            type="button"
+            data-video-src="${taleDemo.video}"
+            aria-label="Play SwanTale redubbing demo"
+            title="Play demo"
+          >
+            <img src="${taleDemo.poster}" alt="SwanTale redubbing demo poster" loading="lazy" decoding="async" />
+            <span class="swantale-play-button" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+            </span>
+          </button>
+          <video
+            class="swantale-video"
+            controls
+            controlsList="nodownload"
+            preload="none"
+            poster="${taleDemo.poster}"
+            playsinline
+          ></video>
+        </div>
+        <p class="swantale-demo-note">${taleDemo.note}</p>
+      </article>
+    </section>`;
+}
+
 function audioRow(label, src, generated = false) {
   return `
     <div class="audio-row ${generated ? "generated" : ""}">
@@ -745,6 +823,51 @@ function renderSphereDemos() {
   return window.swanSphereDemos.render();
 }
 
+function renderSwanTale() {
+  const project = projects.find((item) => item.route === "swantale");
+
+  return `
+    ${hero(
+      "SwanTale",
+      "Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
+      "Jump to Demo",
+      "#swantale-demo",
+      [],
+      paperMeta(project),
+      project.paperUrl
+    )}
+
+    <section class="section">
+      <div class="section-inner overview-stack">
+        <div class="center-copy">
+          <h2>Model overview</h2>
+          <p>
+            SwanTale brings instruct control and zero-shot reuse into the same
+            media generation interface, covering speaker style, dialogue
+            content, acoustic scene, and audio effects in one waveform.
+          </p>
+        </div>
+        <div class="media-frame pipeline-frame compact">
+          ${responsiveImage(
+            "./assets/swantale-structure.png",
+            "SwanTale architecture and Swan Unified MoE overview",
+            { webpSrc: "./assets/swantale-structure.webp", loading: "eager" }
+          )}
+        </div>
+        <div class="abstract-panel">
+          <h2>Abstract</h2>
+          <p>${taleAbstractText}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section muted-section">
+      <div class="section-inner demo-shell">
+        ${renderTaleDemo()}
+      </div>
+    </section>`;
+}
+
 function renderSwanVoice() {
   const project = projects.find((item) => item.route === "swanvoice");
 
@@ -919,6 +1042,13 @@ function currentRoute() {
   const hash = window.location.hash.replace("#", "");
   if (hash === "privacy" || hash === "terms") return hash;
   if (
+    hash === "swantale" ||
+    hash === "swantale-demo" ||
+    hash === "swantale-redubbing"
+  ) {
+    return "swantale";
+  }
+  if (
     hash === "swanvoice" ||
     hash === "swanvoice-demo" ||
     voiceDemoTabs.some((tab) => tab.id === hash)
@@ -960,12 +1090,13 @@ function settleHashScroll(app, hash) {
   const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
   const sphereDemoHash =
     hash === "swansphere-v2sa" || hash === "swansphere-t2sa";
+  const taleDemoHash = hash === "swantale-redubbing";
   const target = document.getElementById(
     benchDemoHash
       ? "bench-demos"
       : voiceDemoHash
         ? "swanvoice-demo"
-        : sphereDemoHash
+        : sphereDemoHash || taleDemoHash
           ? hash
           : hash
   );
@@ -1113,6 +1244,28 @@ function initLazyAudio(root) {
   });
 }
 
+function initLazyVideo(root) {
+  root.querySelectorAll("[data-video-src]").forEach((button) => {
+    if (button.dataset.lazyVideoInit === "true") return;
+    button.dataset.lazyVideoInit = "true";
+    button.addEventListener("click", async () => {
+      const wrap = button.closest(".swantale-video-wrap");
+      const video = wrap?.querySelector("video");
+      if (!wrap || !video) return;
+      if (!video.currentSrc) {
+        video.src = button.dataset.videoSrc;
+        video.load();
+      }
+      wrap.classList.add("is-loaded");
+      try {
+        await video.play();
+      } catch {
+        video.focus();
+      }
+    });
+  });
+}
+
 function resetLazyAudio() {
   lazyAudioState.observer?.disconnect();
   lazyAudioState.observer = null;
@@ -1126,7 +1279,9 @@ function render() {
   window.swanSphereDemos?.stopAll?.();
   resetLazyAudio();
   app.innerHTML =
-    route === "swanvoice"
+    route === "swantale"
+      ? renderSwanTale()
+      : route === "swanvoice"
       ? renderSwanVoice()
       : route === "bench"
         ? renderBench()
@@ -1138,12 +1293,15 @@ function render() {
   setActiveNav(route);
   app.focus({ preventScroll: true });
   initLazyAudio(app);
+  initLazyVideo(app);
   settleHashScroll(app, hash);
   if (route === "swansphere") {
     window.swanSphereDemos?.init?.();
   }
   document.title =
-    route === "swanvoice"
+    route === "swantale"
+      ? "SwanAIGC | SwanTale"
+      : route === "swanvoice"
       ? "SwanAIGC | SwanVoice"
       : route === "bench"
         ? "SwanAIGC | SwanBench-Speech"
