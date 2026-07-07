@@ -10,14 +10,29 @@ const sphereAbstractText =
 const taleAbstractText =
   "Media speech generation is often needed in animation dubbing, audio drama, movies, advertising, games, podcasts, and short-video production. In these scenarios, creators may need to design voices without reference recordings, control speaker styles with natural language, support acoustic scenes with environments and audio effects, and later reuse the designed voices. Therefore, it is important to support multi-speaker speech and audio generation for both instruct and zero-shot tasks. The instruct task requires a caption of the environment, speaker styles, and fine-grained content, while the zero-shot task uses reference audio together with the same fine-grained content. We propose SwanTale, a multi-speaker expressive speech and audio generation model that supports both zero-shot and instruct tasks. SwanTale introduces SwanVAE, incorporates the Engram mechanism, and designs Swan Unified MoE for multi-task and multi-audio-modality modeling.";
 
-const taleDemo = {
-  title: "Instruct + Zero-Shot Redubbing",
-  video:
-    "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swantale/swantale-redubbing-demo.mp4",
-  poster: "./assets/swantale-redubbing-poster.jpg",
-  note:
-    "This demo combines SwanTale instruct control with zero-shot voice reuse for redubbing. The visual track and background music are kept from the original.",
-};
+const taleDemos = [
+  {
+    index: "01",
+    video:
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260618/ceb0b8dd_74eed7ce_b9798f8f.mp4",
+    poster: "./assets/swantale-redubbing-demo-01-poster.jpg",
+  },
+  {
+    index: "02",
+    video:
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260623/redub_instruct_zeroshot_download_8bc62548.mp4",
+    poster: "./assets/swantale-redubbing-demo-02-poster.jpg",
+  },
+  {
+    index: "03",
+    video:
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260623/redub_instruct_zeroshot_download1_8b82a1f2.mp4",
+    poster: "./assets/swantale-redubbing-demo-03-poster.jpg",
+  },
+];
+
+const taleDemoNote =
+  "Each demo combines SwanTale instruct control with zero-shot voice reuse for redubbing. The visual track and background music are kept from the original.";
 
 const demoGroups = [
   {
@@ -28,30 +43,30 @@ const demoGroups = [
       {
         title: "大司马",
         text: "兄弟们这波你千万不要急，表面上看是能开，实际上你一进去就会发现伤害不够、位置也不好，到时候不是你在操作，是对面在操作你。",
-        references: [{ label: "Reference", src: "swanvoice-audio/ref/大司马.wav" }],
-        generated: "swanvoice-audio/gen/dsm_single_01.wav",
+        references: [{ label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" }],
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dsm_single_01.wav",
       },
       {
         title: "刘德华",
         text: "我一直觉得，观众最后记住你的，不一定是最热闹的那场戏，反而常常是一个很轻的眼神，或者一句很普通、但你说得特别真的台词。",
-        references: [{ label: "Reference", src: "swanvoice-audio/ref/dehua.wav" }],
-        generated: "swanvoice-audio/gen/dehua_single_01.wav",
+        references: [{ label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" }],
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dehua_single_01.wav",
       },
       {
         title: "Huang",
         text: "For a long time, software adapted to the computer. Now the computer is being redesigned for intelligence itself, and that shift will redefine not just products, but entire industries.",
         references: [
-          { label: "Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
+          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/huangrenxun.wav" },
         ],
-        generated: "swanvoice-audio/gen/huangrenxun_single_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/huangrenxun_single_01.wav",
       },
       {
         title: "Emma Watson",
         text: "Progress rarely begins with comfort. It begins when someone chooses to speak clearly, even at the risk of being disliked, because silence has simply become too expensive.",
         references: [
-          { label: "Reference", src: "swanvoice-audio/ref/Emmawaltson.wav" },
+          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/Emmawaltson.wav" },
         ],
-        generated: "swanvoice-audio/gen/emma_single_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/emma_single_01.wav",
       },
     ],
   },
@@ -68,10 +83,10 @@ const demoGroups = [
           "S1: 你这个想法就很有问题，游戏不是看谁声音大，是看谁站得住位置。\n" +
           "S2: 行，那下一波你指挥，我来操作。要是打赢了你记得承认，是我把这盘硬生生抬起来的。",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/大司马.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/卢本伟.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%8D%A2%E6%9C%AC%E4%BC%9F.wav" },
         ],
-        generated: "swanvoice-audio/gen/dsm_lbw_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dsm_lbw_duo_01.wav",
       },
       {
         title: "Obama x Trump",
@@ -81,10 +96,10 @@ const demoGroups = [
           "S1: But strength without trust does not hold for very long. A nation also needs patience and institutions people believe in.\n" +
           "S2: Institutions are fine, but if they fail the people, the people want change.",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/obama.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/trump.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/obama.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/trump.wav" },
         ],
-        generated: "swanvoice-audio/gen/obama_trump_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/obama_trump_duo_01.wav",
       },
       {
         title: "胡万 x 六爷",
@@ -94,10 +109,10 @@ const demoGroups = [
           "S1: 那也得分是非黑白，不能谁嗓门大谁就占理。\n" +
           "S2: 你少给我绕弯子，今天这事儿，不是你服不服，是全城的人都在看服不服！",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/让子弹飞胡万.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/让子弹飞六爷.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E8%83%A1%E4%B8%87.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E5%85%AD%E7%88%B7.wav" },
         ],
-        generated: "swanvoice-audio/gen/huwan_liuye_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/huwan_liuye_duo_01.wav",
       },
       {
         title: "Skyler & Ted",
@@ -107,9 +122,9 @@ const demoGroups = [
           "S1: Doing nothing is also a move, and right now it is the one that is killing us.\n" +
           "S2: Then help me find the version of this that does not destroy everything all at once, okay?",
         references: [
-          { label: "Dialogue Ref", src: "swanvoice-audio/ref/skyler_and_ted.wav" },
+          { label: "Dialogue Ref", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/skyler_and_ted.wav" },
         ],
-        generated: "swanvoice-audio/gen/skyler_ted_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/skyler_ted_duo_01.wav",
       },
     ],
   },
@@ -130,12 +145,12 @@ const demoGroups = [
           "S2: 这样层次会很漂亮，而且最后真正爆发的时候，大家会更有感觉。\n" +
           "S3: 没错，技术不是为了炫，是为了把那个情绪送到最对的位置。",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/dehua.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/jialing.wav" },
-          { label: "S3 Reference", src: "swanvoice-audio/ref/jay.wav" },
-          { label: "S4 Reference", src: "swanvoice-audio/ref/dzq.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/jialing.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/jay.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dzq.wav" },
         ],
-        generated: "swanvoice-audio/gen/creative_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/creative_four_01.wav",
       },
       {
         title: "Huang x Musk x Obama x Trump",
@@ -149,12 +164,12 @@ const demoGroups = [
           "S3: And guided by institutions strong enough to channel power toward the public good.\n" +
           "S2: Yes, otherwise I believe people optimize for habit, not truth.",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/huangrenxun.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/musk.wav" },
-          { label: "S3 Reference", src: "swanvoice-audio/ref/obama.wav" },
-          { label: "S4 Reference", src: "swanvoice-audio/ref/trump.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/huangrenxun.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/musk.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/obama.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/trump.wav" },
         ],
-        generated: "swanvoice-audio/gen/forum_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/forum_four_01.wav",
       },
       {
         title: "大司马 x 卢本伟 x 嘎子 x 懒羊羊",
@@ -168,12 +183,12 @@ const demoGroups = [
           "S3: 好好好，我作证，这次谁再甩锅，回头直播间我第一个给他复盘。\n" +
           "S1: 那就这么定，先控视野，再等技能，数到一一起动，别再各打各的。",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/大司马.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/卢本伟.wav" },
-          { label: "S3 Reference", src: "swanvoice-audio/ref/gazi.wav" },
-          { label: "S4 Reference", src: "swanvoice-audio/ref/懒羊羊.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%8D%A2%E6%9C%AC%E4%BC%9F.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/gazi.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E6%87%92%E7%BE%8A%E7%BE%8A.wav" },
         ],
-        generated: "swanvoice-audio/gen/livestream_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/livestream_four_01.wav",
       },
       {
         title: "胡万 x 刘德华 x 灰太狼 x 懒羊羊",
@@ -187,12 +202,12 @@ const demoGroups = [
           "S2: 吃什么吃！规矩没讲明白，谁都别想散！\n" +
           "S3: 行啊，那就把话摊开讲，我倒要看看今天到底是谁最不讲理！",
         references: [
-          { label: "S1 Reference", src: "swanvoice-audio/ref/让子弹飞胡万.wav" },
-          { label: "S2 Reference", src: "swanvoice-audio/ref/dehua.wav" },
-          { label: "S3 Reference", src: "swanvoice-audio/ref/灰太狼2.wav" },
-          { label: "S4 Reference", src: "swanvoice-audio/ref/懒羊羊.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E8%83%A1%E4%B8%87.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E7%81%B0%E5%A4%AA%E7%8B%BC2.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E6%87%92%E7%BE%8A%E7%BE%8A.wav" },
         ],
-        generated: "swanvoice-audio/gen/chaos_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/chaos_four_01.wav",
       },
     ],
   },
@@ -516,36 +531,19 @@ function projectCard(project) {
 }
 
 function renderTaleDemo() {
-  return `
-    <div id="swantale-demo" class="center-copy demo-anchor">
-      <h2>Demo</h2>
-      <p>
-        One redubbing example is shown first while the full SwanTale demo set is
-        being prepared.
-      </p>
-    </div>
-    <section id="swantale-redubbing" class="demo-group demo-segment swantale-demo-segment">
-      <div class="demo-group-header">
-        <div>
-          <div class="demo-group-index">01</div>
-          <h3>Redubbing Demo</h3>
-        </div>
-        <p>Instruct control and zero-shot voice reuse in a preserved video scene.</p>
-      </div>
+  const cards = taleDemos
+    .map(
+      (demo) => `
       <article class="sample-card swantale-video-card">
-        <div class="sample-title">
-          <span>${taleDemo.title}</span>
-          <span class="sample-type">SwanTale</span>
-        </div>
         <div class="swantale-video-wrap">
           <button
             class="swantale-video-poster"
             type="button"
-            data-video-src="${taleDemo.video}"
-            aria-label="Play SwanTale redubbing demo"
+            data-video-src="${demo.video}"
+            aria-label="Play SwanTale redubbing demo ${demo.index}"
             title="Play demo"
           >
-            <img src="${taleDemo.poster}" alt="SwanTale redubbing demo poster" loading="lazy" decoding="async" />
+            <img src="${demo.poster}" alt="SwanTale redubbing demo ${demo.index} poster" loading="lazy" decoding="async" />
             <span class="swantale-play-button" aria-hidden="true">
               <svg viewBox="0 0 24 24">
                 <path d="M8 5v14l11-7z" />
@@ -557,12 +555,32 @@ function renderTaleDemo() {
             controls
             controlsList="nodownload"
             preload="none"
-            poster="${taleDemo.poster}"
+            poster="${demo.poster}"
             playsinline
           ></video>
         </div>
-        <p class="swantale-demo-note">${taleDemo.note}</p>
-      </article>
+      </article>`
+    )
+    .join("");
+
+  return `
+    <div id="swantale-demo" class="center-copy demo-anchor">
+      <h2>Demo</h2>
+      <p>
+        Three redubbing examples show SwanTale instruct control combined with
+        zero-shot voice reuse.
+      </p>
+    </div>
+    <section id="swantale-redubbing" class="demo-group demo-segment swantale-demo-segment">
+      <div class="demo-group-header">
+        <div>
+          <div class="demo-group-index">01</div>
+          <h3>Redubbing Demo</h3>
+        </div>
+        <p>Instruct control and zero-shot voice reuse in a preserved video scene.</p>
+      </div>
+      <div class="sample-grid swantale-demo-grid">${cards}</div>
+      <p class="swantale-demo-note">${taleDemoNote}</p>
     </section>`;
 }
 
@@ -575,7 +593,8 @@ function audioRow(label, src, generated = false) {
 }
 
 function lazyAudio(src) {
-  return `<audio controls controlsList="nodownload noplaybackrate" preload="none" data-src="${encodeURI(src)}" data-audio-type="audio/wav"></audio>`;
+  const audioSrc = /^https?:\/\//.test(src) ? src : encodeURI(src);
+  return `<audio controls controlsList="nodownload noplaybackrate" preload="none" data-src="${audioSrc}" data-audio-type="audio/wav"></audio>`;
 }
 
 function sampleCard(sample, groupTitle) {

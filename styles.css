@@ -780,7 +780,8 @@ audio {
 .swantale-video-poster img {
   width: 100%;
   aspect-ratio: 16 / 9;
-  object-fit: cover;
+  background: #07151e;
+  object-fit: contain;
 }
 
 .swantale-play-button {
