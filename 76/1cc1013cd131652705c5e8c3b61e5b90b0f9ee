@@ -1,0 +1,21 @@
+app.js
+  s_cb8cfa0099acd1::t_942e9d07d0ea6c 17,23,29
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "761cc1013cd131652705c5e8c3b61e5b90b0f9ee",
+  "prompts": {},
+  "sessions": {
+    "s_cb8cfa0099acd1": {
+      "agent_id": {
+        "tool": "codex",
+        "id": "019f4619-f012-7a40-88d4-db0fc1c34480",
+        "model": "unknown"
+      },
+      "human_author": "AaronZ345 <34849476+AaronZ345@users.noreply.github.com>"
+    }
+  },
+  "attestation_metadata": {},
+  "remote_transcripts": {}
+}
