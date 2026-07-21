@@ -14,19 +14,19 @@ const taleDemos = [
   {
     index: "01",
     video:
-      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swantale/video-48k/20260709/ceb0b8dd_74eed7ce_b9798f8f_audio48k.mp4",
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260618/ceb0b8dd_74eed7ce_b9798f8f.mp4",
     poster: "./assets/swantale-redubbing-demo-01-poster.jpg",
   },
   {
     index: "02",
     video:
-      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swantale/video-48k/20260709/redub_instruct_zeroshot_download_8bc62548_audio48k.mp4",
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260623/redub_instruct_zeroshot_download_8bc62548.mp4",
     poster: "./assets/swantale-redubbing-demo-02-poster.jpg",
   },
   {
     index: "03",
     video:
-      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swantale/video-48k/20260709/redub_instruct_zeroshot_download1_8b82a1f2_audio48k.mp4",
+      "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/codex/video_rehost/20260623/redub_instruct_zeroshot_download1_8b82a1f2.mp4",
     poster: "./assets/swantale-redubbing-demo-03-poster.jpg",
   },
 ];
