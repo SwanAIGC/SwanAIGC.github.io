@@ -867,6 +867,22 @@ audio {
   white-space: pre-line;
 }
 
+.swantale-caption-block {
+  display: grid;
+  gap: 8px;
+}
+
+.swantale-caption {
+  max-height: 240px;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.swantale-audio-card .sample-type {
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .audio-list {
   display: grid;
   gap: 12px;

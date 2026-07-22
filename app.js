@@ -288,6 +288,14 @@ const voiceDemoTabs = [
   { id: "swanvoice-four", label: "4 Speakers", groupIndex: 2 },
 ];
 
+const taleDemoTabs = [
+  { id: "swantale-redubbing", label: "Redubbing" },
+  { id: "swantale-drama", label: "Comic Drama" },
+  { id: "swantale-general", label: "General Scene" },
+  { id: "swantale-advertising", label: "Advertising" },
+  { id: "swantale-caption", label: "SwanBench-Caption" },
+];
+
 const legalPages = {
   privacy: {
     title: "Privacy Policy",
@@ -530,7 +538,7 @@ function projectCard(project) {
     </article>`;
 }
 
-function renderTaleDemo() {
+function renderTaleRedubbing() {
   const cards = taleDemos
     .map(
       (demo) => `
@@ -564,13 +572,6 @@ function renderTaleDemo() {
     .join("");
 
   return `
-    <div id="swantale-demo" class="center-copy demo-anchor">
-      <h2>Demo</h2>
-      <p>
-        Three redubbing examples show SwanTale instruct control combined with
-        zero-shot voice reuse.
-      </p>
-    </div>
     <section id="swantale-redubbing" class="demo-group demo-segment swantale-demo-segment">
       <div class="demo-group-header">
         <div>
@@ -582,6 +583,32 @@ function renderTaleDemo() {
       <div class="sample-grid swantale-demo-grid">${cards}</div>
       <p class="swantale-demo-note">${taleDemoNote}</p>
     </section>`;
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+
+function taleSampleCard(sample, sampleIndex) {
+  return `
+    <article class="sample-card swantale-audio-card">
+      <div class="sample-title">
+        <span>${String(sampleIndex + 1).padStart(2, "0")}</span>
+        <span class="sample-type">${escapeHtml(sample.id)}</span>
+      </div>
+      <div class="swantale-caption-block">
+        <div class="audio-label">Caption</div>
+        <div class="target-text swantale-caption">${escapeHtml(sample.caption)}</div>
+      </div>
+      <div class="audio-list">
+        ${audioRow("SwanTale", sample.audio, true)}
+      </div>
+    </article>`;
 }
 
 function audioRow(label, src, generated = false) {
@@ -772,6 +799,62 @@ function voiceDemoNav(activeId) {
   return demoTabNav(voiceDemoTabs, activeId, "SwanVoice demo sections");
 }
 
+function activeTaleDemoId() {
+  const hash = window.location.hash.replace("#", "");
+  return taleDemoTabs.some((tab) => tab.id === hash)
+    ? hash
+    : "swantale-redubbing";
+}
+
+function taleDemoNav(activeId) {
+  return demoTabNav(taleDemoTabs, activeId, "SwanTale demo sections");
+}
+
+function renderTaleDemos() {
+  const activeId = activeTaleDemoId();
+  const data = window.swanTaleDemoData;
+
+  let activeSegment = "";
+  if (activeId === "swantale-redubbing") {
+    activeSegment = renderTaleRedubbing();
+  } else if (data) {
+    const group = data.groups.find((item) => item.id === activeId);
+    activeSegment = group
+      ? `
+        <section id="${group.id}" class="demo-group demo-segment">
+          <div class="demo-group-header">
+            <div>
+              <div class="demo-group-index">${group.index}</div>
+              <h3>${escapeHtml(group.title)}</h3>
+            </div>
+            <p>${escapeHtml(group.summary)}</p>
+          </div>
+          <div class="sample-grid">
+            ${group.samples
+              .map((sample, sampleIndex) => taleSampleCard(sample, sampleIndex))
+              .join("")}
+          </div>
+        </section>`
+      : "";
+  }
+
+  return `
+    <div id="swantale-demo" class="center-copy demo-anchor">
+      <h2>Demos</h2>
+      <p>
+        Redubbing demos lead the collection. Evaluation samples then follow the
+        paper's structure: SwanBench-Scene covers comic drama, general scenes,
+        and advertising, while SwanBench-Caption focuses on heterogeneous
+        speech-and-audio instructions.
+      </p>
+      ${taleDemoNav(activeId)}
+    </div>
+    ${
+      activeSegment ||
+      `<div class="center-copy"><p>Demo data is still loading.</p></div>`
+    }`;
+}
+
 function renderBenchDemos() {
   const data = window.swanBenchDemoData;
   if (!data) {
@@ -882,7 +965,7 @@ function renderSwanTale() {
 
     <section class="section muted-section">
       <div class="section-inner demo-shell">
-        ${renderTaleDemo()}
+        ${renderTaleDemos()}
       </div>
     </section>`;
 }
@@ -1063,7 +1146,7 @@ function currentRoute() {
   if (
     hash === "swantale" ||
     hash === "swantale-demo" ||
-    hash === "swantale-redubbing"
+    taleDemoTabs.some((tab) => tab.id === hash)
   ) {
     return "swantale";
   }
@@ -1107,17 +1190,19 @@ function settleHashScroll(app, hash) {
 
   const benchDemoHash = benchDemoTabs.some((tab) => tab.id === hash);
   const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
+  const taleDemoHash = taleDemoTabs.some((tab) => tab.id === hash);
   const sphereDemoHash =
     hash === "swansphere-v2sa" || hash === "swansphere-t2sa";
-  const taleDemoHash = hash === "swantale-redubbing";
   const target = document.getElementById(
     benchDemoHash
       ? "bench-demos"
       : voiceDemoHash
         ? "swanvoice-demo"
-        : sphereDemoHash || taleDemoHash
-          ? hash
-          : hash
+        : taleDemoHash
+          ? "swantale-demo"
+          : sphereDemoHash
+            ? hash
+            : hash
   );
   if (!target) {
     window.scrollTo({ top: 0 });
