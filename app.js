@@ -220,7 +220,7 @@ const projects = [
     subtitle:
       "Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
     venue: "Technical Report",
-    paperUrl: "",
+    paperUrl: "https://arxiv.org/abs/2608.02023",
     description:
       "A unified model for multi-speaker speech and audio generation across instruct and zero-shot media tasks.",
     image: "./assets/swantale-structure.png",
