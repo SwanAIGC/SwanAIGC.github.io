@@ -227,7 +227,7 @@ const projects = [
     imageWebp: "./assets/swantale-structure.webp",
     previewImage: "./assets/swantale-structure-preview.png",
     previewWebp: "./assets/swantale-structure-preview.webp",
-    status: "Demo Preview",
+    status: "Available",
   },
   {
     route: "swanvoice",
