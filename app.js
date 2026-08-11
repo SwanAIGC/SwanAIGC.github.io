@@ -543,7 +543,7 @@ function renderHome() {
   return `
     ${hero(
       "SwanAIGC",
-      "AI research for audio, speech, and music.",
+      "AI research for speech, audio, and music.",
       "Explore projects",
       "#projects"
     )}
