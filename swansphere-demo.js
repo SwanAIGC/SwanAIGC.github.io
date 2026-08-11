@@ -340,7 +340,8 @@
         </p>
         ${tabNav(activeId)}
       </div>
-      ${activeId === "swansphere-t2sa" ? renderT2SA() : renderV2SA()}`;
+      ${activeId === "swansphere-t2sa" ? renderT2SA() : renderV2SA()}
+      ${window.swanDemoPager?.(tabs, activeId) || ""}`;
   }
 
   function setStatus(button, text) {

@@ -251,6 +251,7 @@ const projects = [
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
     venue: "ACL 2026",
     paperUrl: "https://arxiv.org/abs/2605.28618",
+    codeUrl: "https://github.com/MM-Speech/SwanBench-Speech",
     description:
       "A long-form speech benchmark covering rich scenarios, comprehensive metrics, and model insights.",
     image: "./assets/swanbench-speech.png",
@@ -266,6 +267,7 @@ const projects = [
       "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
     venue: "ICML 2026",
     paperUrl: "https://arxiv.org/abs/2605.30940",
+    codeUrl: "https://github.com/MM-Speech/SwanSphere",
     description:
       "A streaming framework for synchronized spatial audio generation from panoramic videos and text prompts.",
     image: "./assets/swansphere.png",
@@ -404,6 +406,61 @@ function arrowLink(label, href, disabled = false) {
     </${tag}>`;
 }
 
+function demoPager(tabs, activeId) {
+  const activeIndex = tabs.findIndex((tab) => tab.id === activeId);
+  if (activeIndex < 0) return "";
+
+  const activeTab = tabs[activeIndex];
+  const previousTab = tabs[activeIndex - 1];
+  const nextTab = tabs[activeIndex + 1];
+
+  const pagerItem = (tab, direction) => {
+    const isPrevious = direction === "previous";
+    const label = isPrevious ? "Previous Part" : "Next Part";
+    const unavailableLabel = isPrevious ? "First section" : "Last section";
+    const icon = `
+      <span class="demo-pager-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24">
+          <path d="M5 12h14" />
+          <path d="${isPrevious ? "m12 5-7 7 7 7" : "m12 5 7 7-7 7"}" />
+        </svg>
+      </span>`;
+    const copy = `
+      <span class="demo-pager-copy">
+        <small>${label}</small>
+        <strong>${tab ? tab.label : unavailableLabel}</strong>
+      </span>`;
+
+    if (!tab) {
+      return `
+        <span class="demo-pager-link is-${direction} is-disabled" aria-disabled="true">
+          ${isPrevious ? `${icon}${copy}` : `${copy}${icon}`}
+        </span>`;
+    }
+
+    return `
+      <a
+        class="demo-pager-link is-${direction}"
+        href="#${tab.id}"
+        aria-label="${label}: ${tab.label}"
+      >
+        ${isPrevious ? `${icon}${copy}` : `${copy}${icon}`}
+      </a>`;
+  };
+
+  return `
+    <nav class="demo-pager" aria-label="Demo part navigation">
+      ${pagerItem(previousTab, "previous")}
+      <div class="demo-pager-status" aria-current="page">
+        <span>Part ${String(activeIndex + 1).padStart(2, "0")} / ${String(tabs.length).padStart(2, "0")}</span>
+        <strong>${activeTab.label}</strong>
+      </div>
+      ${pagerItem(nextTab, "next")}
+    </nav>`;
+}
+
+window.swanDemoPager = demoPager;
+
 function affiliationLogo(src, alt, className = "") {
   return `<img${className ? ` class="${className}"` : ""} src="${src}" alt="${alt}" />`;
 }
@@ -445,7 +502,8 @@ function hero(
   ctaHref,
   extraAffiliations = [],
   metadata = "",
-  paperHref = null
+  paperHref = null,
+  codeHref = null
 ) {
   const affiliationLogos = [
     affiliationLogo("./assets/bytedance-logo-05sW5bB1.svg", "ByteDance"),
@@ -455,7 +513,9 @@ function hero(
   return `
     <section class="hero">
       <div class="hero-inner">
-        <h1>${title}</h1>
+        <div class="swan-title-wrap">
+          <h1 class="swan-title">${title}</h1>
+        </div>
         ${body ? `<p>${body}</p>` : ""}
         ${metadata}
         <div class="affiliation">
@@ -466,7 +526,12 @@ function hero(
           ${
             paperHref === null
               ? ""
-              : arrowLink("Read the Paper", paperHref, !paperHref)
+              : arrowLink("Paper", paperHref, !paperHref)
+          }
+          ${
+            codeHref === null
+              ? ""
+              : arrowLink("Code", codeHref, !codeHref)
           }
           ${arrowLink(ctaLabel, ctaHref)}
         </div>
@@ -852,7 +917,8 @@ function renderTaleDemos() {
     ${
       activeSegment ||
       `<div class="center-copy"><p>Demo data is still loading.</p></div>`
-    }`;
+    }
+    ${demoPager(taleDemoTabs, activeId)}`;
 }
 
 function renderBenchDemos() {
@@ -882,7 +948,8 @@ function renderBenchDemos() {
       </p>
       ${benchDemoNav(activeId)}
     </div>
-    ${activeSegment}`;
+    ${activeSegment}
+    ${demoPager(benchDemoTabs, activeId)}`;
 }
 
 function renderVoiceDemos() {
@@ -910,7 +977,8 @@ function renderVoiceDemos() {
       <div class="sample-grid">
         ${group.samples.map((sample) => sampleCard(sample, group.title)).join("")}
       </div>
-    </section>`;
+    </section>
+    ${demoPager(voiceDemoTabs, activeId)}`;
 }
 
 function renderSphereDemos() {
@@ -932,7 +1000,7 @@ function renderSwanTale() {
     ${hero(
       "SwanTale",
       "Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
-      "Jump to Demo",
+      "Demo",
       "#swantale-demo",
       [],
       paperMeta(project),
@@ -977,7 +1045,7 @@ function renderSwanVoice() {
     ${hero(
       "SwanVoice",
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
-      "Jump to Demos",
+      "Demo",
       "#swanvoice-demo",
       [],
       paperMeta(project),
@@ -1022,7 +1090,7 @@ function renderBench() {
     ${hero(
       "SwanBench-Speech",
       "Comprehensive Benchmarking of Long-Form Speech Generation in Diverse Scenarios",
-      "Jump to Demos",
+      "Demo",
       "#bench-demos",
       [
         affiliationLogo(
@@ -1032,7 +1100,8 @@ function renderBench() {
         ),
       ],
       paperMeta(project),
-      project.paperUrl
+      project.paperUrl,
+      project.codeUrl
     )}
     <section class="section">
       <div class="section-inner overview-stack">
@@ -1070,7 +1139,7 @@ function renderSwanSphere() {
     ${hero(
       "SwanSphere",
       "Towards Streaming Synchronized Spatial Audio Generation via Autoregressive Diffusion Transformer",
-      "Jump to Demos",
+      "Demo",
       "#swansphere-demo",
       [
         affiliationLogo(
@@ -1080,7 +1149,8 @@ function renderSwanSphere() {
         ),
       ],
       paperMeta(project),
-      project.paperUrl
+      project.paperUrl,
+      project.codeUrl
     )}
     <section id="swansphere-overview" class="section">
       <div class="section-inner overview-stack">
