@@ -1537,6 +1537,76 @@ audio {
   font-weight: 700;
 }
 
+/* SwanWeave editing demos */
+.weave-caption-card {
+  margin-bottom: 14px;
+}
+
+.weave-cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.weave-col {
+  align-content: start;
+  gap: 10px;
+}
+
+.weave-col.is-ours {
+  background:
+    linear-gradient(180deg, rgba(107, 145, 199, 0.1), rgba(215, 161, 180, 0.06)),
+    var(--panel);
+}
+
+.weave-col .sphere-cell-title {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+}
+
+.weave-col.is-ours .sphere-cell-title span {
+  color: var(--blue);
+}
+
+.weave-kind {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.weave-spectro-frame {
+  overflow: hidden;
+  border: 1px solid var(--media-border);
+  border-radius: 8px;
+  background: var(--media-bg);
+}
+
+.weave-spectro-frame img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.weave-col audio {
+  width: 100%;
+  height: 34px;
+}
+
+.weave-real-player {
+  display: grid;
+  gap: 8px;
+}
+
+.weave-real-tag {
+  color: var(--blue);
+  font-size: 12px;
+  font-weight: 760;
+  letter-spacing: 0.04em;
+}
+
 .bench-segment {
   scroll-margin-top: 110px;
 }
@@ -1877,6 +1947,10 @@ audio {
     grid-template-columns: 1fr;
   }
 
+  .weave-cols-5 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sphere-audio-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2046,6 +2120,10 @@ audio {
   }
 
   .sphere-audio-list {
+    grid-template-columns: 1fr;
+  }
+
+  .weave-cols-5 {
     grid-template-columns: 1fr;
   }
 

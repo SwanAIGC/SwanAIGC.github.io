@@ -7,6 +7,9 @@ const benchAbstractText =
 const sphereAbstractText =
   "Real-time and accurate spatial audio generation is pivotal for delivering an immersive experience. However, existing spatial audio synthesis technologies are often encumbered by a tradeoff between generation quality and high inference latency, as well as difficulty in capturing precise spatial information from multimodal inputs. To address these challenges, we propose SwanSphere, a unified streaming framework for high-fidelity spatial audio generation from panoramic videos and text prompts. SwanSphere mainly makes the following contributions: <strong>1)</strong> We introduce a causal autoregressive diffusion transformer architecture that enables streaming high-quality spatial audio generation. <strong>2)</strong> We design a Spatial Video-Audio Contrastive (SVAC) learning strategy to align the video encoder with the acoustic domain, and further employ a multi-objective online direct preference optimization (ODPO) scheme, resulting in strong spatial perception and robust multimodal spatial audio synthesis. <strong>3)</strong> To alleviate the current scarcity of spatial audio datasets, we also develop an automated annotation pipeline for generating detailed spatial captions. Experimental results demonstrate that SwanSphere achieves superior performance in both video-to-spatial and text-to-spatial audio generation tasks.";
 
+const weaveAbstractText =
+  "Spatial audio editing modifies an existing soundfield according to a user's instruction while preserving the rest of the scene. Unlike conventional audio editing, it must reason jointly about audio events, spatial information, dynamic changes, and environmental information in first-order Ambisonic (FOA) waveforms. Existing language-guided editors mainly target conventional audio or rely on sequential operations, and therefore do not directly support one-stage editing for complex 3D spatial instructions. We present <strong>SpatialEdit</strong>, the first one-stage multi-task framework for instruction-guided 3D FOA spatial audio editing. We build paired FOA supervision from open-source speech and sound-effect corpora using controllable room simulation, covering more than ten single-operation and compound tasks across the four editing axes. To handle this heterogeneous edit space, SpatialEdit uses Spatial Edit Mixture-of-Experts (SE-MoE) with dual-level routing, selecting task-aware expert combinations for compound instructions and frame-level routed/null experts for local edit decisions. We further introduce Spatial Preference Optimization (SPO), a Direct Preference Optimization (DPO)-based alignment objective with edit-specific negative targets, and adopt staged training to improve natural-language grounding. Experiments show that SpatialEdit achieves better editing quality than existing general audio editors and spatial audio baselines across all tasks.";
+
 const taleAbstractText =
   "Speech and audio generation is often needed in animation dubbing, audio drama, movies, advertising, games, podcasts, and short-video production. In these scenarios, creators may need to design voices without reference recordings, control speaker styles with natural language, support acoustic scenes with environments and audio effects, and later reuse the designed voices. Therefore, it is important to support multi-speaker speech and audio generation for both instruct and zero-shot tasks. The instruct task requires a caption of the environment, speaker styles, and fine-grained content, while the zero-shot task uses reference audio together with the same fine-grained content. We address these tasks from both the data and model sides. First, we propose <strong>SwanData-Caption</strong>, which cleans raw speech and audio data, adds targeted synthetic coverage, and annotates diverse and accurate multi-level captions. Then, we propose <strong>SwanTale</strong>, a multi-speaker expressive speech and audio generation model that supports both zero-shot and instruct tasks. We introduce SwanVAE to support high-quality multi-audio-modality generation. Then, we adopt reward-conditioned quality control and Engram conditioning, along with Unified MoE for multi-task and multi-audio-modality modeling. In addition, we use curriculum learning and GRPO post-training to let the model progressively learn and strengthen its capabilities. Experimental results show that SwanTale leads on multiple key zero-shot and instruct metrics, achieves the best expressiveness scores in both tasks, and supports complex instruct generation involving multi-speaker speech and audio.";
 
@@ -245,6 +248,21 @@ const projects = [
     status: "Available",
   },
   {
+    route: "swanweave",
+    title: "SwanWeave",
+    subtitle:
+      "One-Stage Multi-Task Instruction-Guided 3D Spatial Audio Editing",
+    venue: "EMNLP 2026",
+    paperUrl: "",
+    description:
+      "A one-stage multi-task framework for instruction-guided 3D FOA spatial audio editing, using SE-MoE dual routing and SPO alignment.",
+    image: "./assets/swanweave-structure.png",
+    imageWebp: "./assets/swanweave-structure.webp",
+    previewImage: "./assets/swanweave-structure-preview.png",
+    previewWebp: "./assets/swanweave-structure-preview.webp",
+    status: "Available",
+  },
+  {
     route: "bench",
     title: "SwanBench-Speech",
     subtitle:
@@ -296,6 +314,19 @@ const taleDemoTabs = [
   { id: "swantale-general", label: "General Scene" },
   { id: "swantale-advertising", label: "Advertising" },
   { id: "swantale-caption", label: "SwanBench-Caption" },
+];
+
+const weaveDemoTabs = [
+  { id: "swanweave-add", label: "Add" },
+  { id: "swanweave-remove", label: "Remove" },
+  { id: "swanweave-extract", label: "Extract" },
+  { id: "swanweave-angle_change", label: "Angle Change" },
+  { id: "swanweave-distance_change", label: "Distance Change" },
+  { id: "swanweave-room_change", label: "Room Change" },
+  { id: "swanweave-angle_motion", label: "Angle Motion" },
+  { id: "swanweave-distance_motion", label: "Distance Motion" },
+  { id: "swanweave-multi", label: "Multi" },
+  { id: "swanweave-real_foa", label: "Real FOA" },
 ];
 
 const legalPages = {
@@ -1182,6 +1213,54 @@ function renderSwanSphere() {
     </section>`;
 }
 
+function renderSwanWeave() {
+  const project = projects.find((item) => item.route === "swanweave");
+
+  return `
+    ${hero(
+      "SwanWeave",
+      "One-Stage Multi-Task Instruction-Guided 3D Spatial Audio Editing",
+      "Demo",
+      "#swanweave-demo",
+      [
+        affiliationLogo(
+          "./assets/zhejiang-university.svg",
+          "Zhejiang University",
+          "zhejiang-logo"
+        ),
+      ],
+      paperMeta(project),
+      project.paperUrl,
+      project.codeUrl
+    )}
+    <section id="swanweave-overview" class="section">
+      <div class="section-inner overview-stack">
+        <div class="center-copy">
+          <h2>Framework overview</h2>
+          <p>
+            SwanWeave (<strong>SpatialEdit</strong>) performs one-stage multi-task instruction-guided 3D spatial audio editing on FOA waveforms. Its SE-MoE dual router selects task-and-frame-aware experts, while SPO (a DPO-style alignment objective) improves natural-language grounding and edit quality.
+          </p>
+        </div>
+        <div class="media-frame pipeline-frame compact">
+          ${responsiveImage(
+            "./assets/swanweave-structure.png",
+            "SwanWeave SpatialEdit SE-MoE and SPO framework",
+            { webpSrc: "./assets/swanweave-structure.webp", loading: "eager" }
+          )}
+        </div>
+        <div class="abstract-panel">
+          <h2>Abstract</h2>
+          <p>${weaveAbstractText}</p>
+        </div>
+      </div>
+    </section>
+    <section class="section muted-section">
+      <div class="section-inner demo-shell">
+        ${window.swanWeaveDemos?.render?.() || ""}
+      </div>
+    </section>`;
+}
+
 function renderLegalPage(type) {
   const page = legalPages[type];
   const sections = page.sections
@@ -1235,6 +1314,14 @@ function currentRoute() {
     hash === "bench-ablation"
   ) return "bench";
   if (
+    hash === "swanweave" ||
+    hash === "swanweave-overview" ||
+    hash === "swanweave-demo" ||
+    weaveDemoTabs.some((tab) => tab.id === hash)
+  ) {
+    return "swanweave";
+  }
+  if (
     hash === "swansphere" ||
     hash === "swansphere-overview" ||
     hash === "swansphere-demo" ||
@@ -1261,6 +1348,7 @@ function settleHashScroll(app, hash) {
   const benchDemoHash = benchDemoTabs.some((tab) => tab.id === hash);
   const voiceDemoHash = voiceDemoTabs.some((tab) => tab.id === hash);
   const taleDemoHash = taleDemoTabs.some((tab) => tab.id === hash);
+  const weaveDemoHash = weaveDemoTabs.some((tab) => tab.id === hash);
   const sphereDemoHash =
     hash === "swansphere-v2sa" || hash === "swansphere-t2sa";
   const target = document.getElementById(
@@ -1270,9 +1358,11 @@ function settleHashScroll(app, hash) {
         ? "swanvoice-demo"
         : taleDemoHash
           ? "swantale-demo"
-          : sphereDemoHash
-            ? hash
-            : hash
+          : weaveDemoHash
+            ? "swanweave-demo"
+            : sphereDemoHash
+              ? hash
+              : hash
   );
   if (!target) {
     window.scrollTo({ top: 0 });
@@ -1451,6 +1541,7 @@ function render() {
   const route = currentRoute();
   const app = document.getElementById("app");
   window.swanSphereDemos?.stopAll?.();
+  window.swanWeaveDemos?.stopAll?.();
   resetLazyAudio();
   app.innerHTML =
     route === "swantale"
@@ -1461,9 +1552,11 @@ function render() {
         ? renderBench()
         : route === "swansphere"
           ? renderSwanSphere()
-          : route === "privacy" || route === "terms"
-            ? renderLegalPage(route)
-            : renderHome();
+          : route === "swanweave"
+            ? renderSwanWeave()
+            : route === "privacy" || route === "terms"
+              ? renderLegalPage(route)
+              : renderHome();
   setActiveNav(route);
   app.focus({ preventScroll: true });
   initLazyAudio(app);
@@ -1471,6 +1564,9 @@ function render() {
   settleHashScroll(app, hash);
   if (route === "swansphere") {
     window.swanSphereDemos?.init?.();
+  }
+  if (route === "swanweave") {
+    window.swanWeaveDemos?.init?.();
   }
   document.title =
     route === "swantale"
@@ -1481,11 +1577,13 @@ function render() {
         ? "SwanAIGC | SwanBench-Speech"
         : route === "swansphere"
           ? "SwanAIGC | SwanSphere"
-          : route === "privacy"
-            ? "SwanAIGC | Privacy Policy"
-            : route === "terms"
-              ? "SwanAIGC | Terms"
-              : "SwanAIGC";
+          : route === "swanweave"
+            ? "SwanAIGC | SwanWeave"
+            : route === "privacy"
+              ? "SwanAIGC | Privacy Policy"
+              : route === "terms"
+                ? "SwanAIGC | Terms"
+                : "SwanAIGC";
 }
 
 window.addEventListener("hashchange", render);
