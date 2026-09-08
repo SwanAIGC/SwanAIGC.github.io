@@ -253,7 +253,8 @@ const projects = [
     subtitle:
       "One-Stage Multi-Task Instruction-Guided 3D Spatial Audio Editing",
     venue: "EMNLP 2026",
-    paperUrl: "",
+    paperUrl: "https://arxiv.org/abs/2609.04975",
+    codeUrl: "https://github.com/MM-Speech/SwanWeave",
     description:
       "A one-stage multi-task framework for instruction-guided 3D FOA spatial audio editing, using SE-MoE dual routing and SPO alignment.",
     image: "./assets/swanweave-structure.png",
