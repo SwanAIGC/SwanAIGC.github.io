@@ -143,25 +143,6 @@ const demoGroups = [
         generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/creative_four_01.wav",
       },
       {
-        title: "Huang x Musk x Obama x Trump",
-        text:
-          "S2: If you reason from physics and economics first, a lot of so-called impossible ideas suddenly become straightforward engineering problems.\n" +
-          "S4: People do not care about theories if nothing changes in their lives. They want to see results, and they want them quickly.\n" +
-          "S1: That is exactly why infrastructure matters. When intelligence becomes cheap and scalable, every industry can be rebuilt around it.\n" +
-          "S3: But progress has to feel shared. Innovation is strongest when ordinary citizens believe it expands opportunity instead of narrowing it.\n" +
-          "S4: Opportunity is good, but weakness is expensive. \n" +
-          "S1: Which is why the next era of computing has to be reliable, efficient, and accessible at global scale.\n" +
-          "S3: And guided by institutions strong enough to channel power toward the public good.\n" +
-          "S2: Yes, otherwise I believe people optimize for habit, not truth.",
-        references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/huangrenxun.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/musk.wav" },
-          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/obama.wav" },
-          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/trump.wav" },
-        ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/forum_four_01.wav",
-      },
-      {
         title: "大司马 x 卢本伟 x 嘎子 x 懒羊羊",
         text:
           "S1: 我就一句话，这波能打，而且必须打，再拖下去节奏全没了！\n" +
