@@ -105,19 +105,6 @@ const demoGroups = [
         generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/obama_trump_duo_01.wav",
       },
       {
-        title: "胡万 x 六爷",
-        text:
-          "S1: 六爷，我承认我说话直了，可这事总得让我说个明白，不能一句规矩就把人摁死了吧。\n" +
-          "S2: 规矩就是规矩！你平时拿它当笑话，到了出事的时候，又想拿道理来救自己？\n" +
-          "S1: 那也得分是非黑白，不能谁嗓门大谁就占理。\n" +
-          "S2: 你少给我绕弯子，今天这事儿，不是你服不服，是全城的人都在看服不服！",
-        references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E8%83%A1%E4%B8%87.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E5%85%AD%E7%88%B7.wav" },
-        ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/huwan_liuye_duo_01.wav",
-      },
-      {
         title: "Skyler & Ted",
         text:
           "S1: You keep saying it will calm down, but nothing about this is calming down. It is getting bigger every single day.\n" +
