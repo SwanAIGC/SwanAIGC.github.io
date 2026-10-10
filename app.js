@@ -41,32 +41,28 @@ const demoGroups = [
     summary: "Expressive zero-shot monologue synthesis from a short reference.",
     samples: [
       {
-        title: "大司马",
-        text: "兄弟们这波你千万不要急，表面上看是能开，实际上你一进去就会发现伤害不够、位置也不好，到时候不是你在操作，是对面在操作你。",
-        references: [{ label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" }],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dsm_single_01.wav",
-      },
-      {
         title: "刘德华",
-        text: "我一直觉得，观众最后记住你的，不一定是最热闹的那场戏，反而常常是一个很轻的眼神，或者一句很普通、但你说得特别真的台词。",
-        references: [{ label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" }],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dehua_single_01.wav",
-      },
-      {
-        title: "Huang",
-        text: "For a long time, software adapted to the computer. Now the computer is being redesigned for intelligence itself, and that shift will redefine not just products, but entire industries.",
+        text: "我一直觉得，观众最后记住你的，不一定是最热闹的那场戏，反而常常是一个很轻的眼神，或者一句很普通，但你说的特别真的台词。",
         references: [
-          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/huangrenxun.wav" },
+          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/90625101c35bd265bffaa0b2b68202ac395ce448b8d79c8e212a03c243acc28d.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/huangrenxun_single_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/402313a4f2a613477d90dfb9d4bf0daba677ce4cd7961e8d2b6ea599a281c50b.wav",
       },
       {
         title: "Emma Watson",
         text: "Progress rarely begins with comfort. It begins when someone chooses to speak clearly, even at the risk of being disliked, because silence has simply become too expensive.",
         references: [
-          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/Emmawaltson.wav" },
+          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/9bde2776f8efa827139356ea0392034226940c95f458abef57565fc56663e51a.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/emma_single_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/aa60ad829e5ade3faa9e44e1a1ea06a6b2f77b22242d430fbef9ff79b9e0e37c.wav",
+      },
+      {
+        title: "Huang",
+        text: "For a long time, software adapted to the computer. Now the computer is being redesigned for intelligence itself, and that shift will redefine not just products, but entire industries.",
+        references: [
+          { label: "Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/bc5e3b80ca7438847f0478c9581088f0f8d3aa066a33ac603022a9192db16e3f.wav" },
+        ],
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/48728bab4e374296b010d8dbc396b66936fa88862df13dc8ddfbd11873fabe5d.wav",
       },
     ],
   },
@@ -78,15 +74,15 @@ const demoGroups = [
       {
         title: "大司马 x 卢本伟",
         text:
-          "S1: 你先别喊，这波不是打不过，是根本不该接。兵线那么差，视野也没有，你冲进去那就是节目效果。\n" +
-          "S2: 什么节目效果！我状态拉满，技能全在，你再给我一次我直接把对面打成教学素材。\n" +
+          "S1: 你先别喊，这波不是打不过，是根本不该接，兵线那么差，视野也没有，你冲进去那就是节目效果。\n" +
+          "S2: 什么节目效果，我状态拉满，技能全在，你再给我一次我直接把对面打成教学素材。\n" +
           "S1: 你这个想法就很有问题，游戏不是看谁声音大，是看谁站得住位置。\n" +
-          "S2: 行，那下一波你指挥，我来操作。要是打赢了你记得承认，是我把这盘硬生生抬起来的。",
+          "S2: 行，那下一波你指挥，我来操作，要是打赢了你记得承认，是我把这盘硬生生抬起来的。",
         references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%8D%A2%E6%9C%AC%E4%BC%9F.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/6f54798cbe77e0ce485ef104e64dddfcea6fd2b6eed84085a2808061b2fbc99e.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/cd8e775df1ec75a4a1d1b66262b9177631e0bf8c5ce08e5a2905c2756ea8ee4b.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/dsm_lbw_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/a6b0c05455d39ba2dc1af8f7db7e46f589766f8ca3a2f2eea0b4e5d13de3aa35.wav",
       },
       {
         title: "Obama x Trump",
@@ -96,10 +92,10 @@ const demoGroups = [
           "S1: But strength without trust does not hold for very long. A nation also needs patience and institutions people believe in.\n" +
           "S2: Institutions are fine, but if they fail the people, the people want change.",
         references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/obama.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/trump.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/60778e3b59031577895287b5861307e79be72a11cde94081828222c365acc48a.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/6807f8c2da43f389848975e31a8a46e78e70a44a3ba2277d46272e0f713b3674.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/obama_trump_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/386da439835ce03a914a4d6bc952655f0adce0c26d3d1f41f37c549013eaab2e.wav",
       },
       {
         title: "Skyler & Ted",
@@ -109,9 +105,9 @@ const demoGroups = [
           "S1: Doing nothing is also a move, and right now it is the one that is killing us.\n" +
           "S2: Then help me find the version of this that does not destroy everything all at once, okay?",
         references: [
-          { label: "Dialogue Ref", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/skyler_and_ted.wav" },
+          { label: "Dialogue Ref", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/ff4827283ba70ac9487995d698d2a3cec156835b73a0166e7e097cca80f6f2c7.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/skyler_ted_duo_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/405191e2c3cae1bf45fbba671580e0a5df3f6729ef8dcdfef0bab8aa43a5283a.wav",
       },
     ],
   },
@@ -123,59 +119,59 @@ const demoGroups = [
       {
         title: "刘德华 x 贾玲 x 周杰伦 x 邓紫棋",
         text:
-          "S3: 我觉得这一段旋律先别急着铺满，留一点空，画面会自己长出来。\n" +
-          "S1: 对，很多时候最打动人的不是复杂，而是那一点很诚恳、很克制的东西。\n" +
-          "S4: 那如果我在第二遍把情绪往上推，前面是不是就更要收着一点？\n" +
-          "S2: 我会想让角色先站住，先让大家相信她为什么会唱这句，然后情绪再出来。\n" +
-          "S1: 对，观众要先被人物带进去，后面的放大才有意义。\n" +
-          "S4: 明白，那我就不一上来全开，先把细节唱给他们听。\n" +
-          "S2: 这样层次会很漂亮，而且最后真正爆发的时候，大家会更有感觉。\n" +
-          "S3: 没错，技术不是为了炫，是为了把那个情绪送到最对的位置。",
+          "S1: 我觉得这一段旋律先别急着铺满，留一点空，画面会自己长出来。\n" +
+          "S2: 对，很多时候最打动人的不是复杂，而是那一点很诚恳、很克制的东西。\n" +
+          "S3: 那如果我在第二遍把情绪往上推，前面是不是就更要收着一点？\n" +
+          "S4: 我会想让角色先站住，先让大家相信她为什么会唱这句，然后情绪再出来。\n" +
+          "S2: 对，观众要先被人物带进去，后面的放大才有意义。\n" +
+          "S3: 明白，那我就不一上来全开，先把细节唱给他们听。\n" +
+          "S4: 这样层次会很漂亮，而且最后真正爆发的时候，大家会更有感觉。\n" +
+          "S1: 没错，技术不是为了炫，是为了把那个情绪送到最对的位置。",
         references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/jialing.wav" },
-          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/jay.wav" },
-          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dzq.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/90625101c35bd265bffaa0b2b68202ac395ce448b8d79c8e212a03c243acc28d.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/d933a2a489dc3d8edc9709fff2e9ca3d8cb3ff374882fa5157bd3dc52e02377c.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/9bcd27863bfe618093e07ff13323b0a9167c35b7230bf5c0ebb6c1a6764c7631.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/1dafe83d7821b3877a1541dba6cb84badc1f202caf15bcb93a78993d9389411a.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/creative_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/12288df84a7a4320774ea252a49220dd47607ce3f54b358f094aea97ce88cae4.wav",
       },
       {
-        title: "大司马 x 卢本伟 x 嘎子 x 懒羊羊",
+        title: "Huang x Musk x Obama x Trump",
         text:
-          "S1: 我就一句话，这波能打，而且必须打，再拖下去节奏全没了！\n" +
-          "S4: 可是我觉得现在冲上去会不会有点危险呀，我连闪现都还没想好要往哪边交。\n" +
-          "S1: 危险肯定有，但是问题不在打不打，在于谁先进去、谁在后面补伤害，这个得讲清楚。\n" +
-          "S3: 你俩先别顶牛，我在旁边都听明白了，一个太想冲，一个太想稳，难怪麦里全是火药味。\n" +
-          "S4: 那要不我们先数三二一，再一起上？这样至少不会有人突然把我卖在前面。\n" +
-          "S2: 行，数就数，但这次谁都别怂，我一旦进去了，后面必须有人跟。\n" +
-          "S3: 好好好，我作证，这次谁再甩锅，回头直播间我第一个给他复盘。\n" +
-          "S1: 那就这么定，先控视野，再等技能，数到一一起动，别再各打各的。",
+          "S1: If you reason from physics and economics first, a lot of so-called impossible ideas suddenly become straightforward engineering problems.\n" +
+          "S2: People do not care about theories if nothing changes in their lives. They want to see results, and they want them quickly.\n" +
+          "S3: That is exactly why infrastructure matters. When intelligence becomes cheap and scalable, every industry can be rebuilt around it.\n" +
+          "S4: But progress has to feel shared. Innovation is strongest when ordinary citizens believe it expands opportunity instead of narrowing it.\n" +
+          "S2: Opportunity is good, but weakness is expensive.\n" +
+          "S3: Which is why the next era of computing has to be reliable, efficient, and accessible at global scale.\n" +
+          "S4: And guided by institutions strong enough to channel power toward the public good.\n" +
+          "S1: Yes, otherwise I believe people optimize for habit, not truth.",
         references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%A4%A7%E5%8F%B8%E9%A9%AC.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E5%8D%A2%E6%9C%AC%E4%BC%9F.wav" },
-          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/gazi.wav" },
-          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E6%87%92%E7%BE%8A%E7%BE%8A.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/bc5e3b80ca7438847f0478c9581088f0f8d3aa066a33ac603022a9192db16e3f.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/57693286ac8f0d8f6cacde3219cb8cead06090245092562a9c7936901995888e.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/60778e3b59031577895287b5861307e79be72a11cde94081828222c365acc48a.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/6807f8c2da43f389848975e31a8a46e78e70a44a3ba2277d46272e0f713b3674.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/livestream_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/709ed58b94fbc431522fb45208180608bfbcab7ab6db02b94b3b3b5b8245e29c.wav",
       },
       {
         title: "胡万 x 刘德华 x 灰太狼 x 懒羊羊",
         text:
-          "S1: 都给我安静！事情闹到这个地步，谁也别想装没看见，今天非得把规矩说清楚不可！\n" +
+          "S1: 都给我安静，事情闹到这个地步，谁也别想装没看见，今天非得把规矩说清楚不可！\n" +
           "S4: 我、我真的只是路过，你们突然都看着我，我现在脑子里一片空白呀。\n" +
           "S1: 路过不路过先放一边，我现在问的是，到底是谁先开的口，谁先搞的事！\n" +
           "S3: 哼，反正不是我一个人的问题，你们一个个都在那儿添油加火，现在倒全想把账算我头上。\n" +
-          "S1: 你这话说得轻巧，刚才最响的就是你，现在又想往后缩？\n" +
+          "S1: 你这话说得轻巧，刚才最响的就是你，现在又想往后缩。\n" +
           "S4: 要不，要不大家先别吵了，坐下来吃点东西再讲道理，好不好？我觉得再吵下去会更乱的。\n" +
           "S2: 吃什么吃！规矩没讲明白，谁都别想散！\n" +
           "S3: 行啊，那就把话摊开讲，我倒要看看今天到底是谁最不讲理！",
         references: [
-          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E8%AE%A9%E5%AD%90%E5%BC%B9%E9%A3%9E%E8%83%A1%E4%B8%87.wav" },
-          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/dehua.wav" },
-          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E7%81%B0%E5%A4%AA%E7%8B%BC2.wav" },
-          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/ref/%E6%87%92%E7%BE%8A%E7%BE%8A.wav" },
+          { label: "S1 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/dbccc96328135b87a9a94aa2d57a1d24a35c5b3a2a29f84cc232a4bb9e00336d.wav" },
+          { label: "S2 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/90625101c35bd265bffaa0b2b68202ac395ce448b8d79c8e212a03c243acc28d.wav" },
+          { label: "S3 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/bdde3e0dfdef0c49281f378e3a1e1c2370a1c1ef475557601a85dae9d97bee13.wav" },
+          { label: "S4 Reference", src: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/9fb9ed9e708845d3f84999f8c605934c0bada0f9426c0fea82ff774b9deeb973.wav" },
         ],
-        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/gen/chaos_four_01.wav",
+        generated: "https://lf-ads-humanaigc.bytecdn.com/obj/humanaigc-ads-data/swanaigc/media/swanvoice/audio/voxdirector_48k_20261010/991a710fc4123df0ca53f2ce69406ed53e438f38fb6d3b117082ec29c35b564b.wav",
       },
     ],
   },
