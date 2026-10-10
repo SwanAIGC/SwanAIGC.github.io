@@ -34,9 +34,6 @@ const taleDemos = [
   },
 ];
 
-const taleDemoNote =
-  "Each demo combines SwanTale instruct control with zero-shot voice reuse for redubbing. The visual track and background music are kept from the original.";
-
 const demoGroups = [
   {
     index: "01",
@@ -646,7 +643,6 @@ function renderTaleRedubbing() {
         <p>Instruct control and zero-shot voice reuse in a preserved video scene.</p>
       </div>
       <div class="sample-grid swantale-demo-grid">${cards}</div>
-      <p class="swantale-demo-note">${taleDemoNote}</p>
     </section>`;
 }
 
