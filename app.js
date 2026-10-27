@@ -185,6 +185,11 @@ const projects = [
       "Unified Multi-Speaker Speech and Audio Generation for Instruct and Zero-Shot Tasks",
     venue: "Technical Report",
     paperUrl: "https://arxiv.org/abs/2608.02023",
+    dailyPaper: {
+      rank: 1,
+      date: "August 4, 2026",
+      url: "https://huggingface.co/papers/2608.02023",
+    },
     description:
       "A unified model for multi-speaker speech and audio generation across instruct and zero-shot media tasks.",
     image: "./assets/swantale-structure.png",
@@ -200,6 +205,11 @@ const projects = [
       "Expressive Long-Form Zero-Shot Speech Synthesis for Both Monologue and Dialogue",
     venue: "Technical Report",
     paperUrl: "https://arxiv.org/abs/2605.30993",
+    dailyPaper: {
+      rank: 3,
+      date: "June 1, 2026",
+      url: "https://huggingface.co/papers/2605.30993",
+    },
     description:
       "A unified zero-shot TTS model for long-form monologue and 1-4 speaker dialogue generation.",
     image: "./assets/swanvoice-structure.png",
@@ -479,11 +489,36 @@ function responsiveImage(
     : img;
 }
 
+function dailyPaperLink(project) {
+  if (!project.dailyPaper) return "";
+
+  const { rank, date, url } = project.dailyPaper;
+  const label = `${project.title} reached #${rank} on Hugging Face Daily Papers on ${date}`;
+
+  return `
+    <a class="recognition-button daily-paper-link" href="${url}" target="_blank" rel="noreferrer"
+      aria-label="${label}" title="${label}">
+      <span><span aria-hidden="true">🤗</span> Hugging Face Daily Papers</span>
+      <strong>#${rank}</strong>
+    </a>`;
+}
+
+function recognitionLinks(project) {
+  const links = dailyPaperLink(project);
+  if (!links) return "";
+
+  return `
+    <nav class="recognition-links" aria-label="${project.title} recognition">
+      ${links}
+    </nav>`;
+}
+
 function paperMeta(project) {
   if (!project) return "";
 
   return `
     <div class="paper-meta">
+      ${recognitionLinks(project)}
       <span class="venue-badge">${project.venue}</span>
     </div>`;
 }
@@ -589,6 +624,7 @@ function projectCard(project) {
           <span>${project.venue}</span>
         </div>
         <h3>${project.title}</h3>
+        ${recognitionLinks(project)}
         <p class="project-subtitle">${project.subtitle}</p>
         <p>${project.description}</p>
         ${arrowLink(`Open ${project.title}`, `#${project.route}`)}

@@ -31,6 +31,10 @@
   --badge-text: #40535d;
   --badge-bg: transparent;
   --badge-border: rgba(64, 83, 93, 0.34);
+  --daily-paper-text: #76531d;
+  --recognition-text: #40535d;
+  --recognition-bg: transparent;
+  --recognition-border: #d2dce7;
   --meta-text: #4d6f9d;
   --meta-divider: #8797a2;
   --project-hover-border: #c8d8ee;
@@ -100,6 +104,10 @@
     --badge-text: #40535d;
     --badge-bg: transparent;
     --badge-border: rgba(64, 83, 93, 0.34);
+    --daily-paper-text: #f0d39d;
+    --recognition-text: #dce5f0;
+    --recognition-bg: transparent;
+    --recognition-border: #42516a;
     --meta-text: #d7e3f2;
     --meta-divider: #8da0b8;
     --project-hover-border: rgba(143, 176, 228, 0.55);
@@ -476,6 +484,58 @@ audio {
   text-transform: uppercase;
 }
 
+.recognition-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  width: 100%;
+}
+
+.recognition-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 28px;
+  max-width: 100%;
+  padding: 5px 8px;
+  border: 1px solid var(--recognition-border);
+  border-radius: 5px;
+  background: var(--recognition-bg);
+  color: var(--recognition-text);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.25;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: border-color 0.18s ease;
+}
+
+.recognition-button strong {
+  font-weight: 650;
+}
+
+.daily-paper-link strong {
+  color: var(--daily-paper-text);
+}
+
+.recognition-button:hover {
+  border-color: var(--blue);
+}
+
+.recognition-button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.hero .recognition-links {
+  --daily-paper-text: #76531d;
+  --recognition-text: #40535d;
+  --recognition-bg: rgba(255, 255, 255, 0.3);
+  --recognition-border: rgba(107, 145, 199, 0.3);
+}
+
 .affiliation {
   display: flex;
   align-items: center;
@@ -745,6 +805,11 @@ audio {
   content: "/";
   margin-right: 7px;
   color: var(--meta-divider);
+}
+
+.project-body .recognition-links {
+  justify-content: flex-start;
+  margin-top: 12px;
 }
 
 .project-subtitle {
